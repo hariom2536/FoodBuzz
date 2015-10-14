@@ -1,0 +1,43 @@
+Registered User(username, password, email, name, dob, gender, annual income, contact_id, street, city, state, zip, phone, card_no, type, exp_date)
+
+---->
+
+Registered User(username, password, email, name, dob, gender, annual income, contact_id, card_no)
+
+Contact Info(contact_id, street, city, state, zip, phone)
+
+Payment Info(card_no, type, number, exp_date)
+
+------------------------------
+
+Buyer(username)
+
+------------------------------
+
+Seller(username)
+
+------------------------------
+
+Supplier(username, cname, p_contact, phone, p_email, street, city, state, zip, category, revenue)
+
+---->
+
+Supplier(username, cname, p_id, address_id, category, revenue)
+
+Person Contact(p_id, p_phone, p_email)
+
+Address Info(address_id, street, city, state, zip)
+
+------------------------------
+
+Rating(rating_id, user_about, user_write)
+
+------------------------------
+
+Delivery(del_id, payment_receipt, item_receipt)
+
+Sale Item(item_id, item_name, description)
+
+Sale(list_price, location, trans_date, item_id, del_id, user_buyer, user_seller)
+
+Auction(reserve_price, highest_bid, location, trans_date, item_id, del_id, user_buyer, user_seller)
