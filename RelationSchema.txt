@@ -30,7 +30,7 @@ Address Info(address_id, street, city, state, zip)
 
 ------------------------------
 
-Rating(rating_id, user_about, user_write)
+Rating(rating_id, user_about, user_write, description)
 
 ------------------------------
 
