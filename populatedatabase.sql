@@ -8,8 +8,13 @@ INSERT INTO Registered_Users(
     VALUES ('kateupton1000','password33','kateupton@yahoo.com','Katelyn Upton',06/10/1992,200000,'F','12233455','40121234562'),
     VALUES ('barackobama12','president12','bo@whitehouse.gov','Barrack H. Obama',08/04/1961,4000000,'M','122133455','40121232562'),
     VALUES ('kyrieirving8','cavs2','kyrie@cavs.com','Kyrie Iriving',03/23/1992,12000000,'M','1221233455','401212432562'),
-    VALUES ('serenawilliams','tennis13','serena@gmail.com','Serena Willaims',09/26/1981,5000000,'M','12213323455','4012124332562'),
-    VALUES ('iggyazelea','president12','bo@whitehouse.gov','Barrack H. Obama',08/04/1961,4000000,'M','122133455','40121232562'),
+    VALUES ('serenawilliams','tennis13','serena@gmail.com','Serena Willaims',09/26/1981,5000000,'F','12213323455','4012124332562'),
+    VALUES ('iggyazalea','music70','iggy@bing.com','Iggy Azalea',06/07/1990,15000000,'F','122133455','40121232562'),
+    VALUES ('fettywap1738','ayyyyyy','fetty@gmail.com','Fetty H. Wap',06/07/1991,3000000,'M','1221331455','401212322562'),
+    VALUES ('rubenslikk','fishmix','astroslikk@metrozu.com','Ruben',06/07/1989,3300000,'M','1210331455','401242322562'),
+    VALUES ('orderback','noun','indvidual@faciliate.com','Ordering O. Food',01/01/1991,3000000,'M','1221331455','401212322562'),
+    VALUES ('Karl22','red12','karlmarx@marx.com','Karl Marx',05/05/1818,2000,'M','1221331455','401212322562'),
+
     
     
     );
