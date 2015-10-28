@@ -123,7 +123,7 @@ INSERT INTO Registered_User(
     VALUES ('100097','Fig Bar','Bakery','0.99','2.99')
     VALUES ('100098','Santitas','Chips','0.99','2.00')
     VALUES ('100099','Beef jerky','Beef','0.99','3.99')
-    VALUES ('1000100','Chex mix','Traditional Snack','0.99','4.99')
+    VALUES ('100100','Chex mix','Traditional Snack','0.99','4.99')
     
     );
     
