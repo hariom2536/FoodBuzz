@@ -136,54 +136,56 @@ INSERT INTO Delivery
      ('100049','red bean ice cream','red bean','3.99'),
      ('100050','fried banana','with ice cream','3.99');
     
-    INSERT INTO Sale_Item(
-    VALUES ('100051','Kitkat','Chocolate')
-    VALUES ('100052','Marshmallow','Candy')
-    VALUES ('100053','Lollipop','Candy')
-    VALUES ('100054','Hershey','Chocolate')
-    VALUES ('100055','Bacon','Meat')
-    VALUES ('100056','Ribs','Meat')
-    VALUES ('100057','Chicken','Meat')
-    VALUES ('100058','Sausage','Meat')
-    VALUES ('100059','Egg','Meat')
-    VALUES ('100060','Cheese','Milk')
-    VALUES ('100061','Snapple','Juice')
-    VALUES ('100062','Cola','Soda')
-    VALUES ('100063','Cookie','Home-made')
-    VALUES ('100064','Pastas','Home-made')
-    VALUES ('100065','Boneless-chicken','Home-made')
-    VALUES ('100066','M&M','Candy')
-    VALUES ('100067','Lays','Chip')
-    VALUES ('100068','Mocha','Coffee')
-    VALUES ('100069','Oreo','chocolate cookie')
-    VALUES ('100070','Spinach Pizza','spinach and fita')
-    VALUES ('100071','Honolulu Pizza','pineapple and meat')
-    VALUES ('100072','Philly Pizza','cheese steak')
-    VALUES ('100073','Hawaiian Pizza','jalapeno and ham')
-    VALUES ('100074','Pasta Primavera','spinach and tomatoes')
-    VALUES ('100075','Italian Pasta','italian sausage')
-    VALUES ('100076','Alfredo Pasta','chicken')
-    VALUES ('100077','Wings','Marinated over-baked')
-    VALUES ('100078','Cheesy Bread','oven-baked')
-    VALUES ('100079','Candy Apples','apples with coating')
-    VALUES ('100070','Champagne Cake','lovely white cake') 
-    VALUES ('100081','Mummy Dogs','hotdogs')
-    VALUES ('100082','Pumpkin Smoothies','pumpkin')
-    VALUES ('100083','Chocolate Spiders','chocolate')
-    VALUES ('100084','Pumpkin Cookies','Cookies')
-    VALUES ('100085','Chip Bread Pudding','chocolaty-banana')
-    VALUES ('100086','Pumpkin Seeds','sweet')
-    VALUES ('100087','Peanut Butter','chocolate')
-    VALUES ('100088','Lemon Cookies','taste like lemon')
-    VALUES ('100089','Shortbread Cookie','chocolate-dipped')
-    VALUES ('100090','Fish Dry Pot','fish and vegetables')
-    VALUES ('100091','Sliced Flounder','chili sauce')
-    VALUES ('100092','French Fries','new baked')
-    VALUES ('100093','Cooked Scallop','dry cooked')
-    VALUES ('100094','Fries Chicken Wrap','with tomatoes')
-    VALUES ('100095','Brisket Sandwich','BBQ beef')
-    VALUES ('100096','Curry Chicken','red curry')
-    VALUES ('100097','Curry Beef','green curry')
-    VALUES ('100098','Salad','tomato and cabbage')
-    VALUES ('100099','red bean ice cream','red bean')
-    VALUES ('100100','fried banana','with ice cream')
+    INSERT INTO Auction_Item
+    VALUES ('100051','Edamame','Soy Bean','0.99','5.99'),
+     ('100052','Wasabi Shumai','Pork Dumplings','2.99','7.99'),
+     ('100053','Kushi Yaki','Beef Dumplings','2.99','8.99'),
+     ('100054','Tempure Appetizer','Shrimp or Chicken','1.99','7.99'),
+     ('100055','Age Tofu','Fried Tofu','0.99','6.99'),
+     ('100056','Sushi Appetizer','4 pieces','3.99','9.99'),
+     ('100057','Harumaki','Spring Roll','3.59','7.99'),
+     ('100058','Fried Calamari','With BBQ Sauce','4.59','10.99'),
+     ('100059','Vege Teriyaki','Vegetables','5.99','15.59'),
+     ('100060','Chicken Teriyaki','Chicken','6.59','17.99'),
+     ('100061','Eel Hand Roll','with avocado','3.59','7.99'),
+     ('100062','Salmon Hand Roll','With Cucumber','3.59','7.99'),
+     ('100063','Crab & Cheese','Irish Cheese','7.99','15.59'),
+     ('100064','Chicken Tender','BBQ Sauce','3.99','12.59'),
+     ('100065','Irish Nachos','House-made','8.99','16.69'),
+     ('100066','Fajita Tacos','Chicken','8.59','16.99'),
+     ('100067','Shrimp Tacos','Crispy','7.99','17.59'),
+     ('100068','Phily Cheesesteak','Beef or Chicken','5.59','13.99'),
+     ('100069','Fish & Chips','Cold Water Cod','7.99','19.99'),
+     ('100070','Shepherd Pie','beef and mushrooms','9.99','19.59'),
+     ('100071','Apple Pie','Apple','5.99','15.59'),
+     ('100072','Chocolate Pie','Chocolate','6.99','17.99'),
+     ('100073','Mashups','Fruit Sauce ','0.99','3.99'),
+     ('100074','Cracker jack','Popcorn','2.99','5.99'),
+     ('100075','Veggie','Vegetable and potato chip','1.99','4.99'),
+     ('100076','Takis','Chip','0.99','2.33'),
+     ('100077','Banana nut','Cookies','0.99','2.88'),
+     ('100078','Pepperidge farm','Chocolate','1.99','4.99'),
+     ('100079','On the border','Sauce','0.99','2.55'),
+     ('100080','Pudding bars','Pudding','0.99','3.99'),
+     ('100081','Velveeta','Cheese','5.00','5.96'),
+     ('100082','Hershey’s spreads','Chocolate','2.99','3.59'),
+     ('100083','Quaker Protein','Butter chocolate','1.99','3.55'),
+     ('100084','Motts','Fruit snacks','2.99','3.59'),
+     ('100085','tostitos','Chips','3.59','5.59'),
+     ('100086','lays classic Mix 20 pk','chips','5.99','6.99'),
+     ('100087','Welch','Fruit snacks','2.99','3.99'),
+     ('100088','Gluten free','Snacks','1.99','3.99'),
+     ('100089','Swiss miss','pudding','1.99','5.99'),
+     ('100090','Goldfish','Snack','2.99','5.99'),
+     ('100091','Doritos','Chips','0.99','3.99'),
+     ('100092','Cheese balls','Cheese','1.99','5.99'),
+     ('100093','Zesta','Snacks','0.99','3.99'),
+     ('100094','Ruffles','Chips','2.99','4.99'),
+     ('100095','Dove','Chocolate','3.99','7.99'),
+     ('100096','Planters','Nuts','3.99','7.99'),
+     ('100097','Fig Bar','Bakery','0.99','2.99'),
+     ('100098','Santitas','Chips','0.99','2.00'),
+     ('100099','Beef jerky','Beef','0.99','3.99'),
+     ('100100','Chex mix','Traditional Snack','0.99','4.99');
+    
+
