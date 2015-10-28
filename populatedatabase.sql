@@ -1,99 +1,23 @@
 INSERT INTO Registered_User(
-    VALUES ('mikeygmikeyg','lebron23','mcg5215@psu.edu','Michael C. Gardner',02/24/1994,10000000,'M','1','0000111122223331'),
-    VALUES ('zhucity','password2','miz5000@psu.edu','Matthew Zhu',08/25/1994,100,'M','2','0000111122223332'),
-    VALUES ('gamergirl68','password3','gamezzz@gmail.com','Lanisha H. Jefferson',03/25/1990,0,'M','3','0000111122223333'),
-    VALUES ('LeBronJames23','lebrongoat','lebron@cavs.com','Lebron James',12/30/1984,24000000,'M','4','0000111122223334'),
-    VALUES ('jeez24','geeze12','enis@gmail.com','Enis H. Gorder','Enis',12/12/1995,0,'M','5','0000111122223335'),
-    VALUES ('derrickrose','injury23','maybenextyear@bulls.com','Derrick Rose',08/04/1988,12000000,'M','6','0000111122223336'),
-    VALUES ('kateupton1000','password33','kateupton@yahoo.com','Katelyn Upton',06/10/1992,200000,'F','7','0000111122223337'),
-    VALUES ('barackobama12','president12','bo@whitehouse.gov','Barrack H. Obama',08/04/1961,4000000,'M','8','0000111122223338'),
-    VALUES ('kyrieirving8','cavs2','kyrie@cavs.com','Kyrie Iriving',03/23/1992,12000000,'M','9','0000111122223339'),
-    VALUES ('serenawilliams','tennis13','serena@gmail.com','Serena Willaims',09/26/1981,5000000,'F','10','0000111122223310'),
-    VALUES ('iggyazalea','music70','iggy@bing.com','Iggy Azalea',06/07/1990,15000000,'F','11','0000111122223311'),
-    VALUES ('fettywap1738','ayyyyyy','fetty@gmail.com','Fetty H. Wap',06/07/1991,3000000,'M','12','0000111122223312'),
-    VALUES ('rubenslikk','fishmix','astroslikk@metrozu.com','Ruben',06/07/1989,3300000,'M','13','0000111122223313'),
-    VALUES ('orderback','noun','indvidual@faciliate.com','Ordering O. Food',01/01/1991,3000000,'M','14','0000111122223314'),
-    VALUES ('Karl22','red12','karlmarx@marx.com','Karl Marx',05/05/1818,2000,'M','15','0000111122223315'),
+    VALUES ('mikeygmikeyg','lebron23','mcg5215@psu.edu','Michael C. Gardner',02/24/1994,10000000,'M','12345','400012345654'),
+    VALUES ('zhucity','password2','miz5000@psu.edu','Matthew Zhu',08/25/1994,100,'M','123455','400012345634'),
+    VALUES ('gamergirl68','password3','gamezzz@gmail.com','Lanisha H. Jefferson',03/25/1990,0,'M','123455','4000123456254'),
+    VALUES ('LeBronJames23','lebrongoat','lebron@cavs.com','Lebron James',12/30/1984,24000000,'M','1234556','4000123456223'),
+    VALUES ('jeez24','geeze12','enis@gmail.com','Enis H. Gorder','Enis',12/12/1995,0,'M','121324','3243532455'),
+    VALUES ('derrickrose','injury23','maybenextyear@bulls.com','Derrick Rose',08/04/1988,12000000,'M','232421','40002234562'),
+    VALUES ('kateupton1000','password33','kateupton@yahoo.com','Katelyn Upton',06/10/1992,200000,'F','12233455','40121234562'),
+    VALUES ('barackobama12','president12','bo@whitehouse.gov','Barrack H. Obama',08/04/1961,4000000,'M','122133455','40121232562'),
+    VALUES ('kyrieirving8','cavs2','kyrie@cavs.com','Kyrie Iriving',03/23/1992,12000000,'M','1221233455','401212432562'),
+    VALUES ('serenawilliams','tennis13','serena@gmail.com','Serena Willaims',09/26/1981,5000000,'F','12213323455','4012124332562'),
+    VALUES ('iggyazalea','music70','iggy@bing.com','Iggy Azalea',06/07/1990,15000000,'F','122133455','40121232562'),
+    VALUES ('fettywap1738','ayyyyyy','fetty@gmail.com','Fetty H. Wap',06/07/1991,3000000,'M','1221331455','401212322562'),
+    VALUES ('rubenslikk','fishmix','astroslikk@metrozu.com','Ruben',06/07/1989,3300000,'M','1210331455','401242322562'),
+    VALUES ('orderback','noun','indvidual@faciliate.com','Ordering O. Food',01/01/1991,3000000,'M','1221331455','401212322562'),
+    VALUES ('Karl22','red12','karlmarx@marx.com','Karl Marx',05/05/1818,2000,'M','1221331455','401212322562'),
+
     );
-
-INSERT INTO Contact_Info(
-    VALUES ('1','1 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('2','2 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('3','3 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('4','4 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('5','5 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('6','6 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('7','7 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('8','8 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('9','9 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('10','10 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('11','11 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('12','12 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('13','13 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('14','14 Main Rd','State College','PA','16801','5555555555'),
-    VALUES ('15','15 Main Rd','State College','PA','16801','5555555555')
-);
-
-INSERT INTO Payment_Info(
-    VALUES ('0000111122223331','VISA','01/01/2021'),
-    VALUES ('0000111122223332','VISA','01/01/2021'),
-    VALUES ('0000111122223333','VISA','01/01/2021'),
-    VALUES ('0000111122223334','VISA','01/01/2021'),
-    VALUES ('0000111122223335','AMEX','01/01/2021'),
-    VALUES ('0000111122223336','AMEX','01/01/2021'),
-    VALUES ('0000111122223337','AMEX','01/01/2021'),
-    VALUES ('0000111122223338','AMEX','01/01/2021'),
-    VALUES ('0000111122223339','DISC','01/01/2021'),
-    VALUES ('0000111122223310','DISC','01/01/2021'),
-    VALUES ('0000111122223311','DISC','01/01/2021'),
-    VALUES ('0000111122223312','MSTR','01/01/2021'),
-    VALUES ('0000111122223313','MSTR','01/01/2021'),
-    VALUES ('0000111122223314','MSTR','01/01/2021'),
-    VALUES ('0000111122223315','MSTR','01/01/2021')
-);
-
-INSERT INTO Buyer(
-    VALUES ('mikeygmikeyg'),
-    VALUES ('zhucity'),
-    VALUES ('gamergirl68'),
-    VALUES ('LeBronJames23'),
-    VALUES ('jeez24'),
-    VALUES ('derrickrose'),
-    VALUES ('kateupton1000'),
-    VALUES ('barackobama12'),
-    VALUES ('kyrieirving8'),
-    VALUES ('serenawilliams')
-);
-
-INSERT INTO Seller(
-    VALUES ('iggyazalea'),
-    VALUES ('fettywap1738'),
-    VALUES ('rubenslikk'),
-    VALUES ('orderback'),
-    VALUES ('Karl22')
-);
-
-INSERT INTO Supplier(
-    VALUES ('orderback', 'Order Inc.', '1', '1', 'Food', 1000000)
-);
-
-INSERT INTO Person_Contact(
-    VALUES ('1', '5555555555', 'mikeyg@mikeyg.mikeyg')
-);
-
-INSERT INTO Address_Info(
-    VALUES ('1', '1 Main St', 'State College', 'PA', '16801')
-);
-
-INSERT INTO Rating(
-    VALUES ('1', 'Average!', 'mikeygmikeyg', 'zhucity')
-);
-
-INSERT INTO Delivery(
-    VALUES ('1', 0, 1),
-    VALUES ('2', 1, 1)
-);
-
+    
+    
  INSERT INTO Sale_Item(
     VALUES ('100001','Kitkat','Chocolate','1.99')
     VALUES ('100002','Marshmallow','Candy','0.99')
@@ -145,56 +69,62 @@ INSERT INTO Delivery(
     VALUES ('100048','Salad','tomato and cabbage','5.99')
     VALUES ('100049','red bean ice cream','red bean','3.99')
     VALUES ('100050','fried banana','with ice cream','3.99')
+    
+    
     );
     
     INSERT INTO Sale_Item(
-    VALUES ('100051','Kitkat','Chocolate')
-    VALUES ('100052','Marshmallow','Candy')
-    VALUES ('100053','Lollipop','Candy')
-    VALUES ('100054','Hershey','Chocolate')
-    VALUES ('100055','Bacon','Meat')
-    VALUES ('100056','Ribs','Meat')
-    VALUES ('100057','Chicken','Meat')
-    VALUES ('100058','Sausage','Meat')
-    VALUES ('100059','Egg','Meat')
-    VALUES ('100060','Cheese','Milk')
-    VALUES ('100061','Snapple','Juice')
-    VALUES ('100062','Cola','Soda')
-    VALUES ('100063','Cookie','Home-made')
-    VALUES ('100064','Pastas','Home-made')
-    VALUES ('100065','Boneless-chicken','Home-made')
-    VALUES ('100066','M&M','Candy')
-    VALUES ('100067','Lays','Chip')
-    VALUES ('100068','Mocha','Coffee')
-    VALUES ('100069','Oreo','chocolate cookie')
-    VALUES ('100070','Spinach Pizza','spinach and fita')
-    VALUES ('100071','Honolulu Pizza','pineapple and meat')
-    VALUES ('100072','Philly Pizza','cheese steak')
-    VALUES ('100073','Hawaiian Pizza','jalapeno and ham')
-    VALUES ('100074','Pasta Primavera','spinach and tomatoes')
-    VALUES ('100075','Italian Pasta','italian sausage')
-    VALUES ('100076','Alfredo Pasta','chicken')
-    VALUES ('100077','Wings','Marinated over-baked')
-    VALUES ('100078','Cheesy Bread','oven-baked')
-    VALUES ('100079','Candy Apples','apples with coating')
-    VALUES ('100070','Champagne Cake','lovely white cake') 
-    VALUES ('100081','Mummy Dogs','hotdogs')
-    VALUES ('100082','Pumpkin Smoothies','pumpkin')
-    VALUES ('100083','Chocolate Spiders','chocolate')
-    VALUES ('100084','Pumpkin Cookies','Cookies')
-    VALUES ('100085','Chip Bread Pudding','chocolaty-banana')
-    VALUES ('100086','Pumpkin Seeds','sweet')
-    VALUES ('100087','Peanut Butter','chocolate')
-    VALUES ('100088','Lemon Cookies','taste like lemon')
-    VALUES ('100089','Shortbread Cookie','chocolate-dipped')
-    VALUES ('100090','Fish Dry Pot','fish and vegetables')
-    VALUES ('100091','Sliced Flounder','chili sauce')
-    VALUES ('100092','French Fries','new baked')
-    VALUES ('100093','Cooked Scallop','dry cooked')
-    VALUES ('100094','Fries Chicken Wrap','with tomatoes')
-    VALUES ('100095','Brisket Sandwich','BBQ beef')
-    VALUES ('100096','Curry Chicken','red curry')
-    VALUES ('100097','Curry Beef','green curry')
-    VALUES ('100098','Salad','tomato and cabbage')
-    VALUES ('100099','red bean ice cream','red bean')
-    VALUES ('100100','fried banana','with ice cream')
+    VALUES ('100051','Edamame','Soy Bean','0.99','5.99')
+    VALUES ('100052','Wasabi Shumai','Pork Dumplings','2.99','7.99')
+    VALUES ('100053','Kushi Yaki','Beef Dumplings','2.99','8.99')
+    VALUES ('100054','Tempure Appetizer','Shrimp or Chicken','1.99','7.99')
+    VALUES ('100055','Age Tofu','Fried Tofu','0.99','6.99')
+    VALUES ('100056','Sushi Appetizer','4 pieces','3.99','9.99')
+    VALUES ('100057','Harumaki','Spring Roll','3.59','7.99')
+    VALUES ('100058','Fried Calamari','With BBQ Sauce','4.59','10.99')
+    VALUES ('100059','Vege Teriyaki','Vegetables','5.99','15.59')
+    VALUES ('100060','Chicken Teriyaki','Chicken','6.59','17.99')
+    VALUES ('100061','Eel Hand Roll','with avocado','3.59','7.99')
+    VALUES ('100062','Salmon Hand Roll','With Cucumber','3.59','7.99')
+    VALUES ('100063','Crab & Cheese','Irish Cheese','7.99','15.59')
+    VALUES ('100064','Chicken Tender','BBQ Sauce','3.99','12.59')
+    VALUES ('100065','Irish Nachos','House-made','8.99','16.69')
+    VALUES ('100066','Fajita Tacos','Chicken','8.59','16.99')
+    VALUES ('100067','Shrimp Tacos','Crispy','7.99','17.59')
+    VALUES ('100068','Phily Cheesesteak','Beef or Chicken','5.59','13.99')
+    VALUES ('100069','Fish & Chips','Cold Water Cod','7.99','19.99')
+    VALUES ('100070','Shepherd Pie','beef and mushrooms','9.99','19.59')
+    VALUES ('100071','Apple Pie','Apple','5.99','15.59')
+    VALUES ('100072','Chocolate Pie','Chocolate','6.99','17.99')
+    VALUES ('100073','Mashups','Fruit Sauce ','0.99','3.99')
+    VALUES ('100074','Cracker jack','Popcorn','2.99','5.99')
+    VALUES ('100075','Veggie','Vegetable and potato chip','1.99','4.99')
+    VALUES ('100076','Takis','Chip','0.99','2.33')
+    VALUES ('100077','Banana nut','Cookies','0.99','2.88')
+    VALUES ('100078','Pepperidge farm','Chocolate','1.99','4.99')
+    VALUES ('100079','On the border','Sauce','0.99','2.55')
+    VALUES ('100080','Pudding bars','Pudding','0.99','3.99')
+    VALUES ('100081','Velveeta','Cheese','5.00','5.96')
+    VALUES ('100082','Hershey’s spreads','Chocolate','2.99','3.59')
+    VALUES ('100083','Quaker Protein','Butter chocolate','1.99','3.55')
+    VALUES ('100084','Motts','Fruit snacks','2.99','3.59')
+    VALUES ('100085','tostitos','Chips','3.59','5.59')
+    VALUES ('100086','lays classic Mix 20 pk','chips','5.99','6.99')
+    VALUES ('100087','Welch','Fruit snacks','2.99','3.99')
+    VALUES ('100088','Gluten free','Snacks','1.99','3.99')
+    VALUES ('100089','Swiss miss','pudding','1.99','5.99')
+    VALUES ('100090','Goldfish','Snack','2.99','5.99')
+    VALUES ('100091','Doritos','Chips','0.99','3.99')
+    VALUES ('100092','Cheese balls','Cheese','1.99','5.99')
+    VALUES ('100093','Zesta','Snacks','0.99','3.99')
+    VALUES ('100094','Ruffles','Chips','2.99','4.99')
+    VALUES ('100095','Dove','Chocolate','3.99','7.99')
+    VALUES ('100096','Planters','Nuts','3.99','7.99')
+    VALUES ('100097','Fig Bar','Bakery','0.99','2.99')
+    VALUES ('100098','Santitas','Chips','0.99','2.00')
+    VALUES ('100099','Beef jerky','Beef','0.99','3.99')
+    VALUES ('1000100','Chex mix','Traditional Snack','0.99','4.99')
+    
+    );
+    
+
