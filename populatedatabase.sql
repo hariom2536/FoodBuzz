@@ -187,5 +187,11 @@ INSERT INTO Delivery
      ('100098','Santitas','Chips','0.99','2.00'),
      ('100099','Beef jerky','Beef','0.99','3.99'),
      ('100100','Chex mix','Traditional Snack','0.99','4.99');
+
+INSERT INTO Sale
+VALUES (01/01/2001, '100010', '1', 'mikeygmikeyg','orderback');
+
+INSERT INTO Auction
+VALUES (02/02/2002, '100097', '2', 'LeBronJames23', 'Karl22');
     
 
