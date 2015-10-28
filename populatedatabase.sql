@@ -84,58 +84,57 @@ INSERT INTO Delivery
     VALUES ('1', 0, 1),
     ('2', 1, 1);
 
- INSERT INTO Sale_Item(
-    VALUES ('100001','Kitkat','Chocolate','1.99')
-    VALUES ('100002','Marshmallow','Candy','0.99')
-    VALUES ('100003','Lollipop','Candy','2.99')
-    VALUES ('100004','Hershey','Chocolate','3.99')
-    VALUES ('100005','Bacon','Meat','7.99')
-    VALUES ('100006','Ribs','Meat','8.99')
-    VALUES ('100007','Chicken','Meat','9.59')
-    VALUES ('100008','Sausage','Meat','5.99')
-    VALUES ('100009','Egg','Meat','3.99')
-    VALUES ('100010','Cheese','Milk','2.99')
-    VALUES ('100011','Snapple','Juice','7.99')
-    VALUES ('100012','Cola','Soda','3.99')
-    VALUES ('100013','Cookie','Home-made','5.99')
-    VALUES ('100014','Pastas','Home-made','7.99')
-    VALUES ('100015','Boneless-chicken','Home-made','5.00')
-    VALUES ('100016','M&M','Candy','1.99')
-    VALUES ('100017','Lays','Chip','3.99')
-    VALUES ('100018','Mocha','Coffee','2.99')
-    VALUES ('100019','Oreo','chocolate cookie','2.99')
-    VALUES ('100020','Spinach Pizza','spinach and fita','14.99')
-    VALUES ('100021','Honolulu Pizza','pineapple and meat','14.99')
-    VALUES ('100022','Philly Pizza','cheese steak','16.99')
-    VALUES ('100023','Hawaiian Pizza','jalapeno and ham','14.99')
-    VALUES ('100024','Pasta Primavera','spinach and tomatoes','12.99')
-    VALUES ('100025','Italian Pasta','italian sausage','8.99')
-    VALUES ('100026','Alfredo Pasta','chicken','8.99')
-    VALUES ('100027','Wings','Marinated over-baked','5.99')
-    VALUES ('100028','Cheesy Bread','oven-baked','3.99')
-    VALUES ('100029','Candy Apples','apples with coating','5.99')
-    VALUES ('100030','Champagne Cake','lovely white cake','5.99') 
-    VALUES ('100031','Mummy Dogs','hotdogs','2.99')
-    VALUES ('100032','Pumpkin Smoothies','pumpkin','4.99')
-    VALUES ('100033','Chocolate Spiders','chocolate','5.99')
-    VALUES ('100034','Pumpkin Cookies','Cookies','3.99')
-    VALUES ('100035','Chip Bread Pudding','chocolaty-banana','3.99')
-    VALUES ('100036','Pumpkin Seeds','sweet','2.99')
-    VALUES ('100037','Peanut Butter','chocolate','1.00')
-    VALUES ('100038','Lemon Cookies','taste like lemon','3.99')
-    VALUES ('100039','Shortbread Cookie','chocolate-dipped','3.99')
-    VALUES ('100040','Fish Dry Pot','fish and vegetables','8.99')
-    VALUES ('100041','Sliced Flounder','chili sauce','3.99')
-    VALUES ('100042','French Fries','new baked','3.99')
-    VALUES ('100043','Cooked Scallop','dry cooked','6.99')
-    VALUES ('100044','Fries Chicken Wrap','with tomatoes','5.99')
-    VALUES ('100045','Brisket Sandwich','BBQ beef','7.99')
-    VALUES ('100046','Curry Chicken','red curry','5.99')
-    VALUES ('100047','Curry Beef','green curry','6.99')
-    VALUES ('100048','Salad','tomato and cabbage','5.99')
-    VALUES ('100049','red bean ice cream','red bean','3.99')
-    VALUES ('100050','fried banana','with ice cream','3.99')
-    );
+ INSERT INTO Sale_Item
+     VALUES ('100001','Kitkat','Chocolate','1.99'),
+     ('100002','Marshmallow','Candy','0.99'),
+     ('100003','Lollipop','Candy','2.99'),
+     ('100004','Hershey','Chocolate','3.99'),
+     ('100005','Bacon','Meat','7.99'),
+     ('100006','Ribs','Meat','8.99'),
+     ('100007','Chicken','Meat','9.59'),
+     ('100008','Sausage','Meat','5.99'),
+     ('100009','Egg','Meat','3.99'),
+     ('100010','Cheese','Milk','2.99'),
+     ('100011','Snapple','Juice','7.99'),
+     ('100012','Cola','Soda','3.99'),
+     ('100013','Cookie','Home-made','5.99'),
+     ('100014','Pastas','Home-made','7.99'),
+     ('100015','Boneless-chicken','Home-made','5.00'),
+     ('100016','M&M','Candy','1.99'),
+     ('100017','Lays','Chip','3.99'),
+     ('100018','Mocha','Coffee','2.99'),
+     ('100019','Oreo','chocolate cookie','2.99'),
+     ('100020','Spinach Pizza','spinach and fita','14.99'),
+     ('100021','Honolulu Pizza','pineapple and meat','14.99'),
+     ('100022','Philly Pizza','cheese steak','16.99'),
+     ('100023','Hawaiian Pizza','jalapeno and ham','14.99'),
+     ('100024','Pasta Primavera','spinach and tomatoes','12.99'),
+     ('100025','Italian Pasta','italian sausage','8.99'),
+     ('100026','Alfredo Pasta','chicken','8.99'),
+     ('100027','Wings','Marinated over-baked','5.99'),
+     ('100028','Cheesy Bread','oven-baked','3.99'),
+     ('100029','Candy Apples','apples with coating','5.99'),
+     ('100030','Champagne Cake','lovely white cake','5.99'),
+     ('100031','Mummy Dogs','hotdogs','2.99'),
+     ('100032','Pumpkin Smoothies','pumpkin','4.99'),
+     ('100033','Chocolate Spiders','chocolate','5.99'),
+     ('100034','Pumpkin Cookies','Cookies','3.99'),
+     ('100035','Chip Bread Pudding','chocolaty-banana','3.99'),
+     ('100036','Pumpkin Seeds','sweet','2.99'),
+     ('100037','Peanut Butter','chocolate','1.00'),
+     ('100038','Lemon Cookies','taste like lemon','3.99'),
+     ('100039','Shortbread Cookie','chocolate-dipped','3.99'),
+     ('100040','Fish Dry Pot','fish and vegetables','8.99'),
+     ('100041','Sliced Flounder','chili sauce','3.99'),
+     ('100042','French Fries','new baked','3.99'),
+     ('100043','Cooked Scallop','dry cooked','6.99'),
+     ('100044','Fries Chicken Wrap','with tomatoes','5.99'),
+     ('100045','Brisket Sandwich','BBQ beef','7.99'),
+     ('100046','Curry Chicken','red curry','5.99'),
+     ('100047','Curry Beef','green curry','6.99'),
+     ('100048','Salad','tomato and cabbage','5.99'),
+     ('100049','red bean ice cream','red bean','3.99'),
+     ('100050','fried banana','with ice cream','3.99');
     
     INSERT INTO Sale_Item(
     VALUES ('100051','Kitkat','Chocolate')
