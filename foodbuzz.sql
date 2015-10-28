@@ -91,13 +91,13 @@ CREATE TABLE Delivery(
 
 CREATE TABLE Item(
 	item_id			CHAR(20),
-	item_name		CHAR(20)
-	description		CHAR(20),
 	PRIMARY KEY (item_id)
 );
 
 CREATE TABLE Sale_Item(
 	item_id			CHAR(20),
+	item_name		CHAR(20),
+	description		CHAR(20),
 	price 			REAL,
 	PRIMARY KEY (item_id),
 	FOREIGN KEY (item_id) REFERENCES Item (item_id)
@@ -105,6 +105,8 @@ CREATE TABLE Sale_Item(
 
 CREATE TABLE Auction_Item(
 	item_id			CHAR(20),
+	item_name		CHAR(20),
+	description		CHAR(20),
 	reserve_price	REAL,
 	highest_bid		REAL,
 	PRIMARY KEY (item_id),
