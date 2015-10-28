@@ -89,16 +89,29 @@ CREATE TABLE Delivery(
 	PRIMARY KEY (del_id)
 );
 
-CREATE TABLE Sale_Item(
+CREATE TABLE Item(
 	item_id			CHAR(20),
 	item_name		CHAR(20)
 	description		CHAR(20),
 	PRIMARY KEY (item_id)
 );
 
+CREATE TABLE Sale_Item(
+	item_id			CHAR(20),
+	price 			REAL,
+	PRIMARY KEY (item_id),
+	FOREIGN KEY (item_id) REFERENCES Item (item_id)
+);
+
+CREATE TABLE Auction_Item(
+	item_id			CHAR(20),
+	reserve_price	REAL,
+	highest_bid		REAL,
+	PRIMARY KEY (item_id),
+	FOREIGN KEY (item_id) REFERENCES Item (item_id)
+);
+
 CREATE TABLE Sale(
-	list_price		REAL,
-	location		CHAR(20),
 	trans_date		DATE,
 	item_id			CHAR(20),
 	del_id			CHAR(20),
@@ -112,16 +125,13 @@ CREATE TABLE Sale(
 );
 
 CREATE TABLE Auction(
-	reserve_price	REAL,
-	highest_bid		REAL,
-	location		CHAR(20),
 	trans_date		DATE,
 	item_id			CHAR(20),
 	del_id			CHAR(20),
 	user_buyer		CHAR(20),
 	user_seller		CHAR(20),
 	PRIMARY KEY (item_id, del_id, user_buyer, user_seller),
-	FOREIGN KEY (item_id) REFERENCES Sale_Item (item_id),
+	FOREIGN KEY (item_id) REFERENCES Auction_Item (item_id),
 	FOREIGN KEY (del_id) REFERENCES Delivery (del_id),
 	FOREIGN KEY (user_buyer) REFERENCES Registered_Users (username),
 	FOREIGN KEY (user_seller) REFERENCES Seller (username)
