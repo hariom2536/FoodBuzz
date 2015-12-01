@@ -91,8 +91,47 @@
     </div>
 
 	  <button type="button" class="btn btn-success">Sign Up</button>
-	</center>
+
+    </center>
       <hr>
+
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>
+    <script>
+ 
+    $( button ).ready(function() {
+ 
+    $( "a" ).click(function( event ) {
+ 
+        alert( "Thanks for visiting!" );
+ 
+    });
+
+
+    <?php
+    //Step3
+    $result = mysql_query("SELECT R.Username 
+                           FROM Registered_User R
+                           WHERE R.Username = 
+                                    ", $db);
+     if ($result) {
+     die("Duplicate Username, try again.. " . mysql_error());
+     }
+
+     ?>
+    
+ 
+    });
+
+
+
+ 
+    </script>
+    
+
+    
+
+
 
       <footer>
         <p>&copy; 2015 Company, Inc.</p>

@@ -66,21 +66,31 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-    	<h3>Sign In</h3>
+    	<h3>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h3>
     </div>
     
-    <div class="container">
-      <label>Username</label>
-      <div class="input-group">
-  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-	  </div>
+      <?php
+    //Step3
+    $result = mysql_query("SELECT * FROM Auction_Item", $db);
+     if (!$result) {
+     die("Database query failed: " . mysql_error());
+     }
+     //Step4
+     while ($row = mysql_fetch_array($result)) {
+     
+      
+      #<div class="panel panel-primary"></div>
+  
+   
+      echo $row[1]." ".$row[2]."<br />";
 
-	  <label>Password</label>
-      <div class="input-group">
-  		<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-	  </div>
 
-	  <button type="button" onclick="location.href = 'mainpage.php';" class="btn btn-success">Sign In</button>
+     }
+    ?>
+
+
+
+
 	</center>
       <hr>
 
