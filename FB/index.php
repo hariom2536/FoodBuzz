@@ -4,7 +4,7 @@
  die("Database connection failed miserably: " . mysql_error());
  }
  //Step2
- $db_select = mysql_select_db("proj",$db);
+ $db_select = mysql_select_db("FoodBuzz",$db);
  if (!$db_select) {
  die("Database selection also failed miserably: " . mysql_error());
  }
