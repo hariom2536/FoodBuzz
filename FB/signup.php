@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+ $db = mysql_connect("localhost","root",""); 
+ if (!$db) {
+ die("Database connection failed miserably: " . mysql_error());
+ }
+ //Step2
+ $db_select = mysql_select_db("proj",$db);
+ if (!$db_select) {
+ die("Database selection also failed miserably: " . mysql_error());
+ }
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Create Account</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,46 +53,45 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a onclick="location.href = 'index.php';" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            <button type="signin" class="btn btn-success">Sign In</button>
-            <button type="signup" class="btn btn-success">Sign Up</button>
+            <button onclick="location.href = 'signin.php';" type="button" class="btn btn-success">Sign In</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <center>
     <div class="jumbotron">
-      <div class="container">
-        <h1>FoodBuzz</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
+      <h3>Create Account</h3>
+    </div>
+    
+    <div class="container">
+      <label>Username</label>
+      <div class="input-group">
+  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+	     </div>
+
+	  <label>Password</label>
+    <div class="input-group">
+  		<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+	  </div>
+
+    <label>Email</label>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
+    <label>Your Name</label>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+    </div>
 
+	  <button type="button" class="btn btn-success">Sign Up</button>
+	</center>
       <hr>
 
       <footer>
@@ -100,3 +110,8 @@
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+<?php
+//Step5
+ mysql_close($db);
+?>
