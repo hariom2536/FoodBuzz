@@ -79,11 +79,25 @@
      while ($row = mysql_fetch_array($result)) {
      
       
-      #<div class="panel panel-primary"></div>
+      #<div class="cities">
+      #<h2>London</h2>
+      #<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+      #</div>
+
   
    
-      echo $row[1]." ".$row[2]."<br />";
-
+      #echo $row[1].' '.$row[2].'<br />';
+      echo "<div class='row'>
+       <div class='col-sm-6 col-md-4'>
+          <div class='thumbnail'>
+              <div class='caption'>
+                <h3>$row[1] <br /> $row[2]<br /></h3>
+                  <p></p>
+                    <p><a href='#' class='btn btn-primary' role='button'>Add To Cart</a> <a href='#'' class='btn btn-default' role='button'>Seller Info</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>" ;
 
      }
     ?>
