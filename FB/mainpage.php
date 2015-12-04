@@ -69,7 +69,7 @@
     	<h3>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h3>
     </div>
     
-    <div id="products" class ="center">
+    <div id="products">
       <?php
     //Step3
     $result = mysql_query("SELECT * FROM Auction_Item", $db);
@@ -85,8 +85,6 @@
       #<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
       #</div>
 
-  
-   
       #echo $row[1].' '.$row[2].'<br />';
       echo "<div class='row'>
        <div class='col-sm-6 col-md-4'>
