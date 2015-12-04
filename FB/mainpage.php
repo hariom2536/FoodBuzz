@@ -29,7 +29,7 @@
     <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="foodbuzz.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -69,6 +69,7 @@
     	<h3>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h3>
     </div>
     
+    <div id="products" class ="center">
       <?php
     //Step3
     $result = mysql_query("SELECT * FROM Auction_Item", $db);
@@ -101,7 +102,7 @@
 
      }
     ?>
-
+</div>
 
 
 
