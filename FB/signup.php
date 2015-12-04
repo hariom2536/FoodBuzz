@@ -104,22 +104,24 @@
     $( "a" ).click(function( event ) {
  
         alert( "Thanks for visiting!" );
+
+
+        <?php
+        //Step3
+        $result = mysql_query("SELECT R.Username 
+                               FROM Registered_User R
+                                        ", $db);
+         if ($result) {
+         die("Duplicate Username, try again.. " . mysql_error());
+         }
+
+         ?>
  
     });
 
 
-    <?php
-    //Step3
-    $result = mysql_query("SELECT R.Username 
-                           FROM Registered_User R
-                           WHERE R.Username = 
-                                    ", $db);
-     if ($result) {
-     die("Duplicate Username, try again.. " . mysql_error());
-     }
 
-     ?>
-    
+
  
     });
 

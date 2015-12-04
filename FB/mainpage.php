@@ -53,7 +53,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a onclick="location.href = 'index.php';" class="navbar-brand" href="#">FoodBuzz</a>
+          <a onclick="location.href = 'index.php';"  class="navbar-brand" href="#">
+             Foodbuzz
+
+          </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
