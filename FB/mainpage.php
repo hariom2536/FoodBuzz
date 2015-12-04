@@ -69,8 +69,14 @@
       <h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
     </div>
 
-    <div class="well" onclick="location.href = 'saleitempage.php';">Sale Items</div>
-    <div class="well" onclick="location.href = 'auctionitempage.php';">Auction Items</div>
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" onclick="location.href = 'saleitempage.php';"><h2>Sale Items</h2></button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" onclick="location.href = 'auctionitempage.php';"><h2>Auction Items</h2></button>
+  </div>
+</div>
 
 
 
