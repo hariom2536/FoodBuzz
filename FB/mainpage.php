@@ -66,7 +66,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-    	<h3>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h3>
+    	<h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
     </div>
     
     <div id="products">
