@@ -75,7 +75,7 @@
   		<input name = "uname" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
 	     
        <script>
-        var username = document.getElementById("uname").value;
+        username = document.getElementById("uname").value;
 
 
         </script>

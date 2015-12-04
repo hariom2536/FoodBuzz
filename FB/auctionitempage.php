@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Sign In</title>
+    <title>Auction Items</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,15 +66,46 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-      <h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
+    	<h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
     </div>
+    
+    <div id="products">
+      <?php
+    //Step3
+    $result = mysql_query("SELECT * FROM Auction_Item", $db);
+     if (!$result) {
+     die("Database query failed: " . mysql_error());
+     }
+     //Step4
+     while ($row = mysql_fetch_array($result)) {
+     
+      
+      #<div class="cities">
+      #<h2>London</h2>
+      #<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+      #</div>
 
-    <div class="well" onclick="location.href = 'saleitempage.php';">Sale Items</div>
-    <div class="well" onclick="location.href = 'auctionitempage.php';">Auction Items</div>
+      #echo $row[1].' '.$row[2].'<br />';
+      echo "<div class='row'>
+       <div class='col-sm-6 col-md-4'>
+          <div class='thumbnail'>
+              <div class='caption'>
+                <h2>$row[1] <br /> </h2>
+                <body>$row[2]<br /></body>
+                  <p></p>
+                    <p><a href='#' class='btn btn-primary' role='button'>Add To Cart</a> <a href='#'' class='btn btn-default' role='button'>Seller Info</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>" ;
+
+     }
+    ?>
+</div>
 
 
 
-  </center>
+	</center>
       <hr>
 
       <footer>
