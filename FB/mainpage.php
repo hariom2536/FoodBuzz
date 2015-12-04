@@ -56,9 +56,6 @@
           <a onclick="location.href = 'index.php';" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button onclick="location.href = 'signup.php';" type="button" class="btn btn-success">Create Account</button>
-          </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -90,7 +87,8 @@
        <div class='col-sm-6 col-md-4'>
           <div class='thumbnail'>
               <div class='caption'>
-                <h3>$row[1] <br /> $row[2]<br /></h3>
+                <h3>$row[1] <br /> </h3>
+                <body>$row[2]<br /></body>
                   <p></p>
                     <p><a href='#' class='btn btn-primary' role='button'>Add To Cart</a> <a href='#'' class='btn btn-default' role='button'>Seller Info</a></p>
                     </div>
