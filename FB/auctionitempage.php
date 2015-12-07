@@ -80,7 +80,7 @@
           <div class="search">
             <div class='col-md-3'></div>
             <div class='col-md-5'>
-            <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
+            <input name = "search" type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
             </div>
             <div class='col-md-1'>
             <button type="submit" href="auctionitempage.php" class="btn btn-primary btn-sm">Search</button>

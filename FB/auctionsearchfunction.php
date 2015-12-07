@@ -59,8 +59,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="mainpage.php">Home</a></li>
-            <li class="active"><a href="saleitempages.php">Sale Items</a></li>
-            <li><a href="auctionitempage.php">Auction Items</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
+            <li class="active"><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="accountpage.php">Account</a></li>
