@@ -45,7 +45,7 @@ if (!$result2 ) {
         }
 
 $result3 = mysql_query("INSERT INTO Registered_User (username,password,email,name,contact_id,card_no)
-                                VALUES ('$uname','$password','$email','$yourname','$card_no','$contact_id');", $db);
+                                VALUES ('$uname','$password','$email','$yourname','$contact_id','$cardno');", $db);
         
         if (!$result3 ) {
           die("Database query failed3: " . mysql_error());
