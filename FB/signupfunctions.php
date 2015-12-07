@@ -1,4 +1,5 @@
- <?php
+<?php
+
  $db = mysql_connect("localhost","root",""); 
  if (!$db) {
  die("Database connection failed miserably: " . mysql_error());
@@ -8,11 +9,7 @@
  if (!$db_select) {
  die("Database selection also failed miserably: " . mysql_error());
  }
-?>
 
-
-
-<?php
 #session_start();
 
 $uname=$_POST['username'];
@@ -20,38 +17,41 @@ $password=$_POST['password'];
 $email=$_POST['email'];
 $yourname=$_POST['name'];
 $cardno=$_POST['cardno'];
-
 $contact_id = GUID();
-
 $street=$_POST['street'];
 $city=$_POST['city'];
 $state=$_POST['state'];
 $zip=$_POST['zip'];
 $phone=$POST['phone'];
-
-
-
+$fail=0;
 
 $result1 = mysql_query("INSERT INTO Contact_Info (contact_id,street,city,state,zip,phone)
-                                VALUES ('$contact_id','$street','$city','$state','$zip','$phone');", $db);
+                        VALUES ('$contact_id','$street','$city','$state','$zip','$phone');", $db);
 if (!$result1 ) {
-          die("Database query failed1: " . mysql_error());
-        }
+  $fail = 1;
+  die("Database query failed1: " . mysql_error());
+}
 
 $result2 = mysql_query("INSERT INTO Payment_Info (card_no,type,exp_date)
-                                VALUES ('$cardno','VISA','20162402');", $db);
+                        VALUES ('$cardno','VISA','20162402');", $db);
 if (!$result2 ) {
-          die("Database query failed2: " . mysql_error());
-        }
+  $fail = 1;
+  die("Database query failed2: " . mysql_error());
+}
 
 $result3 = mysql_query("INSERT INTO Registered_User (username,password,email,name,contact_id,card_no)
-                                VALUES ('$uname','$password','$email','$yourname','$contact_id','$cardno');", $db);
-        
-        if (!$result3 ) {
-          die("Database query failed3: " . mysql_error());
-        }
+                        VALUES ('$uname','$password','$email','$yourname','$contact_id','$cardno');", $db);
+if (!$result3 ) {
+  $fail = 1;
+  die("Database query failed3: " . mysql_error());
+}
 
 mysql_close($db);
+
+if(!$fail) {
+  header('Location: mainpage.php');
+}
+
 ?>
 
 <?php
@@ -66,8 +66,3 @@ mysql_close($db);
 }
 
 ?>
-
-
-
-
-

@@ -69,18 +69,21 @@
     	<h3>Sign In</h3>
     </div>
     
+    <form name="reg" action="signinfunctions.php" onsubmit="return validateForm()" method="post">
     <div class="container">
       <label>Username</label>
       <div class="input-group">
-  		<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-	  </div>
+      <input name = "username" type="text" class="form-control" placeholder="Username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>">
+	    </div>
 
 	  <label>Password</label>
       <div class="input-group">
-  		<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+  		<input name = "password" type="password" class="form-control" placeholder="Password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>">
 	  </div>
 
-	  <button type="button" onclick="location.href = 'mainpage.php';" class="btn btn-success">Sign In</button>
+	  <button name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Sign In</button>
+    </div>
+    </form>
 	</center>
       <hr>
 
