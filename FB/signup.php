@@ -69,35 +69,80 @@
       <h3>Create Account</h3>
     </div>
     
+
+    <form name="reg" action="signupfunctions.php" onsubmit="return validateForm()" method="post">
     <div class="container">
+
       <label>Username</label>
       <div class="input-group">
-  		<input name = "uname" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-	     
-       <script>
-        username = document.getElementById("uname").value;
-
-
-        </script>
-
-       </div>
+  		<input name = "username" type="text" class="form-control" placeholder="Username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>">
+      </div>
 
 	  <label>Password</label>
     <div class="input-group">
-  		<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-	  </div>
+  		<input name = "password" type="password" class="form-control" placeholder="Password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>">
+
+    </div>
 
     <label>Email</label>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+      <input name ="email" type="text" class="form-control" placeholder="Email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>">
+    
     </div>
 
     <label>Your Name</label>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+      <input name = "yourname" type="text" class="form-control" placeholder="Name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>">
+
     </div>
 
-	  <button type="button" class="btn btn-success">Sign Up</button>
+    <label>Card No.</label>
+    <div class="input-group">
+      <input name = "cardno" type="text" class="form-control" placeholder="Number" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>">
+
+    </div>
+
+
+     <br/><br/>
+     <label>Address Info</label>
+     <br/><br/>
+
+     <label>Street</label>
+    <div class="input-group">
+      <input name = "street" type="text" class="form-control" placeholder="Street" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $street;?>">
+
+    </div>
+
+     <label>City</label>
+    <div class="input-group">
+      <input name = "city" type="text" class="form-control" placeholder="City" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $city;?>">
+
+    </div>
+
+     <label>State</label>
+    <div class="input-group">
+      <input name = "state" type="text" class="form-control" placeholder="State" maxlength="2" aria-describedby="basic-addon1" value="<?php echo $state;?>">
+
+    </div>
+
+     <label>Zip</label>
+    <div class="input-group">
+      <input name = "zip" type="text" maxLength="5" class="form-control" placeholder="Zip" maxlength="5" aria-describedby="basic-addon1" value="<?php echo $zip;?>">
+    </div>
+
+     <label>Phone</label>
+    <div class="input-group">
+      <input name = "phone" type="text" maxLength="10" class="form-control" placeholder="Phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>">
+    </div>
+
+
+
+	  <button name = "submit" type="submit" onClick="self.location='signupfunctions.php?name=signupUser'"  class="btn btn-success">Sign Up</button>
+
+  </div>
+  </form>
+    
+
 
     </center>
       <hr>
