@@ -67,6 +67,17 @@
     <center>
     <div class="jumbotron">
     	<h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
+
+           <div class="container">
+        <div class="row">
+              <div class="search">
+      <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
+       <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </div>
+        </div>
+      </div>
+
+
     </div>
     
     <div id="products">
