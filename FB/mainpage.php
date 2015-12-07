@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Sign In</title>
+    <title>FoodBuzz: Main</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,8 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,13 +54,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a onclick="location.href = 'index.php';"  class="navbar-brand" href="#">
-             Foodbuzz
-
-          </a>
+          <a href="mainpage.php" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-        </div><!--/.navbar-collapse -->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="mainpage.php">Home</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
+            <li><a href="auctionitempage.php">Auction Items</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="accountpage.php">Account</a></li>
+            <li><a href="index.php">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -67,31 +74,10 @@
     <center>
     <div class="jumbotron">
       <h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
-
-      
-      
     </div>
 
-
-
-
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default" onclick="location.href = 'saleitempage.php';"><h2>Sale Items</h2></button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default" onclick="location.href = 'auctionitempage.php';"><h2>Auction Items</h2></button>
-  </div>
-</div>
-
-
-
   </center>
-      <hr>
-
-      <footer>
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
+      
     </div> <!-- /container -->
 
 

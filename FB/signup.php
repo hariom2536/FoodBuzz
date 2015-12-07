@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Create Account</title>
+    <title>FoodBuzz: Create Account</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="foodbuzz.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -44,7 +44,8 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,13 +54,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a onclick="location.href = 'index.php';" class="navbar-brand" href="#">FoodBuzz</a>
+          <a href="index.php" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button onclick="location.href = 'signin.php';" type="button" class="btn btn-success">Sign In</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="signin.php">Sign In</a></li>
+            <li class="active"><a href="signup.php">Create Account</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -69,89 +72,113 @@
       <h3>Create Account</h3>
     </div>
     
-
+<!--
     <form name="reg" action="signupfunctions.php" onsubmit="return validateForm()" method="post">
     <div class="container">
+      <div class="col-md-2"></div>
 
-      <label>Username</label>
-      <div class="input-group">
-  		<input name = "username" type="text" class="form-control" placeholder="Username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>">
+      <div class="col-md-4">
+        <label>Username</label>
+        <div class="input-group">
+    		  <input name = "username" type="text" class="form-control" placeholder="Username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>">
+        </div>
+
+    	  <br><label>Password</label>
+        <div class="input-group">
+      		<input name = "password" type="password" class="form-control" placeholder="Password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>">
+        </div>
+
+        <br><label>Email</label>
+        <div class="input-group">
+          <input name ="email" type="text" class="form-control" placeholder="Email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>">
+        </div>
+
+        <br><label>Your Name</label>
+        <div class="input-group">
+          <input name = "yourname" type="text" class="form-control" placeholder="Name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>">
+        </div>
+
+        <br><label>Card No.</label>
+        <div class="input-group">
+          <input name = "cardno" type="text" class="form-control" placeholder="Number" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>">
+        </div>
       </div>
 
-	  <label>Password</label>
-    <div class="input-group">
-  		<input name = "password" type="password" class="form-control" placeholder="Password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>">
-
+      <div class="col-md-4">
+        <label>Address Info</label>
+     
+        <br><div class="input-group">
+          <input name = "street" type="text" class="form-control" placeholder="Street" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $street;?>">
+        </div>
+        
+        <br><div class="input-group">
+          <input name = "city" type="text" class="form-control" placeholder="City" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $city;?>">
+        </div>
+        
+        <br><div class="input-group">
+          <input name = "state" type="text" class="form-control" placeholder="State" maxlength="2" aria-describedby="basic-addon1" value="<?php echo $state;?>">
+        </div>
+        
+        <br><div class="input-group">
+          <input name = "zip" type="text" maxLength="5" class="form-control" placeholder="Zip" maxlength="5" aria-describedby="basic-addon1" value="<?php echo $zip;?>">
+        </div>
+       
+        <br><div class="input-group">
+          <input name = "phone" type="text" maxLength="10" class="form-control" placeholder="Phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>">
+        </div>
+      </div>
+      <div class="col-md-2"></div>
     </div>
 
-    <label>Email</label>
-    <div class="input-group">
-      <input name ="email" type="text" class="form-control" placeholder="Email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>">
-    
-    </div>
-
-    <label>Your Name</label>
-    <div class="input-group">
-      <input name = "yourname" type="text" class="form-control" placeholder="Name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>">
-
-    </div>
-
-    <label>Card No.</label>
-    <div class="input-group">
-      <input name = "cardno" type="text" class="form-control" placeholder="Number" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>">
-
-    </div>
-
-
-     <br/><br/>
-     <label>Address Info</label>
-     <br/><br/>
-
-     <label>Street</label>
-    <div class="input-group">
-      <input name = "street" type="text" class="form-control" placeholder="Street" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $street;?>">
-
-    </div>
-
-     <label>City</label>
-    <div class="input-group">
-      <input name = "city" type="text" class="form-control" placeholder="City" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $city;?>">
-
-    </div>
-
-     <label>State</label>
-    <div class="input-group">
-      <input name = "state" type="text" class="form-control" placeholder="State" maxlength="2" aria-describedby="basic-addon1" value="<?php echo $state;?>">
-
-    </div>
-
-     <label>Zip</label>
-    <div class="input-group">
-      <input name = "zip" type="text" maxLength="5" class="form-control" placeholder="Zip" maxlength="5" aria-describedby="basic-addon1" value="<?php echo $zip;?>">
-    </div>
-
-     <label>Phone</label>
-    <div class="input-group">
-      <input name = "phone" type="text" maxLength="10" class="form-control" placeholder="Phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>">
-    </div>
-
-
-
+    <br>
 	  <button name = "submit" type="submit" onClick="self.location='signupfunctions.php?name=signupUser'"  class="btn btn-success">Sign Up</button>
 
-  </div>
   </form>
-    
+    -->
+    <div class="container">
+
+      <form class="form-signin" action="signupfunctions.php" onsubmit="return validateForm()" method="post">
+      <label>Account Information</label>
+
+        <label for="inputUser" class="sr-only">Email address</label>
+        <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="cont" id="inputPassword" class="form-control" placeholder="Password" required>
+       
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input name = "email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>" type="cont" id="inputEmail" class="form-control" placeholder="Email" required>
+
+        <label for="inputName" class="sr-only">Name</label>
+        <input name = "name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>" type="cont" id="inputName" class="form-control" placeholder="Name" required>
+        
+        <label for="inputCardNo" class="sr-only">Card No.</label>
+        <input name = "cardno" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>" type="last" id="inputCardNo" class="form-control" placeholder="Credit Card No." required>
+        
+
+      <br><label>Address Information</label>
+
+        <label for="inputStreet" class="sr-only">Street Address</label>
+        <input name = "street" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $street;?>" type="cont" id="inputStreet" class="form-control" placeholder="Street Address" required>
+
+        <label for="inputCity" class="sr-only">City</label>
+        <input name = "city" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $city;?>" type="cont" id="inputCity" class="form-control" placeholder="City" required>
+
+        <label for="inputState" class="sr-only">State</label>
+        <input name = "state" maxlength="2" aria-describedby="basic-addon1" value="<?php echo $state;?>" type="cont" id="inputState" class="form-control" placeholder="State" required>
+
+        <label for="inputZip" class="sr-only">Zip Code</label>
+        <input name = "zip" maxlength="5" aria-describedby="basic-addon1" value="<?php echo $zip;?>" type="cont" id="inputStreet" class="form-control" placeholder="Zip Code" required>
+
+        <label for="inputPhone" class="sr-only">Phone No.</label>
+        <input name = "phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>" type="last" id="inputPhone" class="form-control" placeholder="Phone No." required>
+
+
+        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signupfunctions.php?name=signupUser'" class="btn btn-success">Create Account</button>
+      </form>
 
 
     </center>
-      <hr>
-
-  
-
-      <footer>
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
     </div> <!-- /container -->
 
 

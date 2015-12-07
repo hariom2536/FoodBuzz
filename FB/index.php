@@ -22,7 +22,7 @@
     <link rel="shortcut_icon" href="foodbuzzlogo.ico" />
 
 
-    <title>Foodbuzz</title>
+    <title>FoodBuzz: Index</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="foodbuzz.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -45,8 +45,8 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -55,24 +55,24 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a onclick="location.href = 'index.php';" class="navbar-brand" href="#">FoodBuzz</a>
+          <a href="index.php" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <button onclick="location.href = 'signin.php';" type="button" class="btn btn-success">Sign In</button>
-            <button onclick="location.href = 'signup.php';" type="button" class="btn btn-success">Create Account</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="signin.php">Sign In</a></li>
+            <li><a href="signup.php">Create Account</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="img/foodbuzzlogo.png" alt="logo" />
-        <!-- <h1>FoodBuzz</h1> -->
+        <center>
+        <img src="img/foodbuzzlogo.png" alt="logo" style="width:300px;height:150px;"/>
+        </center>
         <p>Here at FoodBuzz we are striving to make it easier for people in college towns and also across the entire nation to get healthy local foods to their front door. We are intent on keeping food prices low while having shipping convenient and fast for customers. We hope you get a FoodBuzz going every week.</p>
-        <p><a class="btn btn-primary btn-lg" onclick="location.href = 'mainpage.php';" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
@@ -96,11 +96,6 @@
         </div>
       </div>
 
-      <hr>
-
-      <footer>
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
     </div> <!-- /container -->
 
 

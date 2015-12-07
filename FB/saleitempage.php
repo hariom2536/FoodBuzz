@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Sale Items</title>
+    <title>FoodBuzz: Sale Items</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,8 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,77 +54,81 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a onclick="location.href = 'index.php';"  class="navbar-brand" href="#">
-             Foodbuzz
-
-          </a>
+          <a href="mainpage.php" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-        </div><!--/.navbar-collapse -->
+          <ul class="nav navbar-nav">
+            <li><a href="mainpage.php">Home</a></li>
+            <li class="active"><a href="saleitempage.php">Sale Items</a></li>
+            <li><a href="auctionitempage.php">Auction Items</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="accountpage.php">Account</a></li>
+            <li><a href="index.php">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-    	<h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
-
-
+      <h2>Sale Items</h2>
       <div class="container">
         <div class="row">
-              <div class="search">
-      <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
-       <button type="submit" class="btn btn-primary btn-sm">Search</button>
-      </div>
+          <div class="search">
+            <div class='col-md-3'></div>
+            <div class='col-md-5'>
+            <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
+            </div>
+            <div class='col-md-1'>
+            <button type="submit" class="btn btn-primary btn-sm">Search</button>
+            </div>
+            <div class='col-md-3'></div>
+          </div>
         </div>
       </div>
 
 
     </div>
     
-    <div id="products">
+    <div class="container">
       <?php
-    //Step3
-    $result = mysql_query("SELECT * FROM Sale_Item", $db);
-     if (!$result) {
-     die("Database query failed: " . mysql_error());
-     }
-     //Step4
-     while ($row = mysql_fetch_array($result)) {
-     
-      
-      #<div class="cities">
-      #<h2>London</h2>
-      #<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-      #</div>
+      $result = mysql_query("SELECT * FROM Sale_Item", $db);
+      if (!$result) {
+        die("Database query failed: " . mysql_error());
+      }
 
-      #echo $row[1].' '.$row[2].'<br />';
-      echo "<div class='row'>
-       <div class='col-sm-6 col-md-4'>
-          <div class='thumbnail'>
-              <div class='caption'>
-                <h2>$row[1] <br /> </h2>
-                <body>$row[2]<br /></body>
-                  <p></p>
-                    <p><a href='#' class='btn btn-primary' role='button'>Add To Cart</a> <a href='#'' class='btn btn-default' role='button'>Seller Info</a></p>
+      $count = 0;
+      while ($row = mysql_fetch_array($result)) {
+        if($count%3 == 2) {
+          echo "<div class='row'>";
+        }
+          echo "<div class='col-md-4'>
+                  <div class='thumbnail'>
+                    <div class='caption'>
+                      <h2>$row[1] <br /> </h2>
+                      <body>$row[2]<br /></body>
+                      <br>
+                      <p><a href='#' class='btn btn-primary' role='button'>Purchase</a> <a href='#'' class='btn btn-default' role='button'>Info</a></p>
                     </div>
                   </div>
-                </div>
-              </div>" ;
+                </div>";
+
+        if($count%3 == 2) {
+          echo "</div>";
+        }
+        
+
+        $count = $count+1;
 
      }
     ?>
-</div>
+  </div>
 
 
 
 	</center>
-      <hr>
-
-      <footer>
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

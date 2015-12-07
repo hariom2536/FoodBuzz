@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Sign In</title>
+    <title>FoodBuzz: Account</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -54,13 +54,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.php" class="navbar-brand" href="#">FoodBuzz</a>
+          <a href="mainpage.php" class="navbar-brand" href="#">FoodBuzz</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          
+          <ul class="nav navbar-nav">
+            <li><a href="mainpage.php">Home</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
+            <li><a href="auctionitempage.php">Auction Items</a></li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="signin.php">Sign In</a></li>
-            <li><a href="signup.php">Create Account</a></li>
+            <li class="active"><a href="accountpage.php">Account</a></li>
+            <li><a href="index.php">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -69,24 +73,15 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-      <h3>Sign In</h3>
+      <h2>Account</h2>
+      
     </div>
     
-    <div class="container">
 
-      <form class="form-signin" action="signinfunctions.php" onsubmit="return validateForm()" method="post">
-        <label for="inputUser" class="sr-only">Email address</label>
-        <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required autofocus>
 
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="last" id="inputPassword" class="form-control" placeholder="Password" required>
-        
-        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Sign In</button>
-      </form>
 
-    </div> <!-- /container -->
+
 	</center>
-
     </div> <!-- /container -->
 
 
