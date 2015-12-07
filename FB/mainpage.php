@@ -67,7 +67,13 @@
     <center>
     <div class="jumbotron">
       <h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
+
+      
+      
     </div>
+
+
+
 
     <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
