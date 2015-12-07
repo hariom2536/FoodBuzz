@@ -19,9 +19,9 @@ $uname=$_POST['username'];
 $password=$_POST['password'];
 $email=$_POST['email'];
 $yourname=$_POST['name'];
-$cardno=$_POST['card_no'];
+$cardno=$_POST['cardno'];
 
-$contact_id = 20;
+$contact_id = GUID();
 
 $street=$_POST['street'];
 $city=$_POST['city'];
