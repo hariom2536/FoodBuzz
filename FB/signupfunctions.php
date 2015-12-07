@@ -21,7 +21,7 @@ $email=$_POST['email'];
 $yourname=$_POST['name'];
 $cardno=$_POST['card_no'];
 
-$contact_id = GUID();
+$contact_id = 20;
 
 $street=$_POST['street'];
 $city=$_POST['city'];
@@ -34,19 +34,19 @@ $phone=$POST['phone'];
 
 $result1 = mysql_query("INSERT INTO Contact_Info (contact_id,street,city,state,zip,phone)
                                 VALUES ('$contact_id','$street','$city','$state','$zip','$phone');", $db);
+if (!$result1 ) {
+          die("Database query failed1: " . mysql_error());
+        }
 
 $result2 = mysql_query("INSERT INTO Payment_Info (card_no,type,exp_date)
                                 VALUES ('$cardno','VISA','20162402');", $db);
+if (!$result2 ) {
+          die("Database query failed2: " . mysql_error());
+        }
 
 $result3 = mysql_query("INSERT INTO Registered_User (username,password,email,name,contact_id,card_no)
                                 VALUES ('$uname','$password','$email','$yourname','$card_no','$contact_id');", $db);
         
-        if (!$result1 ) {
-          die("Database query failed1: " . mysql_error());
-        }
-        if (!$result2 ) {
-          die("Database query failed2: " . mysql_error());
-        }
         if (!$result3 ) {
           die("Database query failed3: " . mysql_error());
         }
