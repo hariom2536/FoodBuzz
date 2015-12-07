@@ -71,6 +71,7 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <form name="reg" action="salesearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
       <h2>Sale Items</h2>
@@ -79,19 +80,18 @@
           <div class="search">
             <div class='col-md-3'></div>
             <div class='col-md-5'>
-            <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
+            <input name = "search" maxlength="40" id= "search "type="cont" class="form-control input-sm" maxlength="64" placeholder="Search..." value="<?php echo $city;?>" required/>
             </div>
             <div class='col-md-1'>
-            <button type="submit" class="btn btn-primary btn-sm">Search</button>
+            <button type="submit" href="saleitempage.php" class="btn btn-primary btn-sm">Search</button>
             </div>
             <div class='col-md-3'></div>
           </div>
         </div>
       </div>
-
-
     </div>
-    
+    </form>
+
     <div class="container">
       <?php
       $result = mysql_query("SELECT * FROM Sale_Item", $db);

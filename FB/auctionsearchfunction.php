@@ -1,4 +1,4 @@
-<?php
+ <?php
  $db = mysql_connect("localhost","root",""); 
  if (!$db) {
  die("Database connection failed miserably: " . mysql_error());
@@ -59,8 +59,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="mainpage.php">Home</a></li>
-            <li><a href="saleitempage.php">Sale Items</a></li>
-            <li class="active"><a href="auctionitempage.php">Auction Items</a></li>
+            <li class="active"><a href="saleitempages.php">Sale Items</a></li>
+            <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="accountpage.php">Account</a></li>
@@ -71,7 +71,8 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-     <form name="reg" action="auctionsearchfunction.php" onsubmit="return validateForm()" method="post">
+
+    <form name="reg" action="auctionsearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
       <h2>Auction Items</h2>
@@ -80,7 +81,7 @@
           <div class="search">
             <div class='col-md-3'></div>
             <div class='col-md-5'>
-            <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
+            <input name = "search" maxlength="40" id= "search "type="cont" class="form-control input-sm" maxlength="64" placeholder="Search..." value="<?php echo $city;?>" required/>
             </div>
             <div class='col-md-1'>
             <button type="submit" href="auctionitempage.php" class="btn btn-primary btn-sm">Search</button>
@@ -89,15 +90,24 @@
           </div>
         </div>
       </div>
+    </form>
+
+
     </div>
-  </form>
     
     <div class="container">
       <?php
-      $result = mysql_query("SELECT * FROM Auction_Item", $db);
-      if (!$result) {
-        die("Database query failed: " . mysql_error());
-      }
+      $search=$_POST['search'];
+  
+      $result = mysql_query("SELECT * 
+            FROM Auction_Item A
+            WHERE  A.description LIKE '%{$search}%'
+            OR A.item_name LIKE '%{$search}%';", $db);
+
+        if (!$result ) {
+          die("Database query failed1: " . mysql_error());
+        }
+
 
       $count = 0;
       while ($row = mysql_fetch_array($result)) {
@@ -128,9 +138,7 @@
 
 
 
-
-	</center>
-    </div> <!-- /container -->
+  </center>
 
 
     <!-- Bootstrap core JavaScript
@@ -148,3 +156,4 @@
 //Step5
  mysql_close($db);
 ?>
+

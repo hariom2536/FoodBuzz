@@ -32,8 +32,8 @@ if (!$result1 ) {
   die("Database query failed1: " . mysql_error());
 }
 
-$result2 = mysql_query("INSERT INTO Payment_Info (card_no,type,exp_date)
-                        VALUES ('$cardno','VISA','20162402');", $db);
+$result2 = mysql_query("INSERT INTO Payment_Info (card_no,type)
+                        VALUES ('$cardno','VISA');", $db);
 if (!$result2 ) {
   $fail = 1;
   die("Database query failed2: " . mysql_error());
