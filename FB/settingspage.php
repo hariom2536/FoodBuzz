@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Account</title>
+    <title>FoodBuzz: Settings</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +63,13 @@
             <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="accountpage.php">Account</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Sell an item</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="settingspage.php">Settings</a></li>
+              </ul>
             <li><a href="index.php">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -73,7 +79,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-      <h2>Account</h2>
+      <h2>Settings</h2>
       
     </div>
     

@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Sale Items</title>
+    <title>FoodBuzz: Product</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="mainpage.php">Home</a></li>
-            <li class="active"><a href="saleitempage.php">Sale Items</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
             <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -77,64 +77,18 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <form name="reg" action="salesearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
-      <h2>Sale Items</h2>
-      <div class="container">
-        <div class="row">
-          <div class="search">
-            <div class='col-md-3'></div>
-            <div class='col-md-5'>
-            <input name = "search" maxlength="40" type="cont" class="form-control input-sm" maxlength="64" placeholder="Search..." required/>
-            </div>
-            <div class='col-md-1'>
-            <button type="submit" href="saleitempage.php" class="btn btn-primary btn-sm">Search</button>
-            </div>
-            <div class='col-md-3'></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </form>
-
-    <div class="container">
       <?php
-      $result = mysql_query("SELECT * FROM Sale_Item", $db);
-      if (!$result) {
-        die("Database query failed: " . mysql_error());
-      }
+        $info=$_POST['info'];
+        echo $info[0];
+      ?>
+    </div>
 
-      $count = 0;
-      while ($row = mysql_fetch_array($result)) {
-        $id = $row[1];
-        if($count%3 == 2) {
-          echo "<div class='row'>";
-        }
-          echo "<div class='col-md-4'>
-                  <div class='thumbnail'>
-                    <div class='caption'>
-                      <h2>$row[1] <br /> </h2>
-                      <body>$row[2]<br /></body>
-                      <br>
-                      <p><a href='#' class='btn btn-primary' role='button'>Purchase</a> 
-                      <form name='reg' action='productpage.php' onsubmit='return validateForm()'' method='post'>
-                        <input type='hidden' value='<?php echo $row?>' name='info' />
-                        <a type='submit' href='productpage.php' class='btn btn-default' role='button'>Info</a></p>
-                      </form>
-                    </div>
-                  </div>
-                </div>";
+  </center>
+      
+    </div> <!-- /container -->
 
-        if($count%3 == 2) {
-          echo "</div>";
-        }
-        
-        $count = $count+1;
-     }
-    ?>
-  </div>
-	</center>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -63,7 +63,13 @@
             <li class="active"><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="accountpage.php">Account</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Sell an item</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="settingspage.php">Settings</a></li>
+              </ul>
             <li><a href="index.php">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->

@@ -72,7 +72,7 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
 
-    <form name="reg" action="salesearchfunction.php" onsubmit="return validateForm()" method="post">
+    <form name="reg" action="productinfofunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
       <h2>Sale Items</h2>
