@@ -119,7 +119,7 @@ if($result->num_rows != 1) {
             <input name = "cardno" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>" type="cont" id="inputCardNo" class="form-control" placeholder="Credit Card No." required autofocus>
 
             <label for="inputExpDate" class="sr-only">Exp. Date</label>
-            <input name = "expdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $expdate;?>" type="last" id="inputExpDate" class="form-control" placeholder="Exp. Date" required>
+            <input name = "expdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $expdate;?>" type="date" id="inputExpDate" class="form-control" placeholder="Exp. Date" required>
                 
             <div class="form-group">
               <label for="sel1" class="sr-only">Type:</label>

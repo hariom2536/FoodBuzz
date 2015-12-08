@@ -140,21 +140,34 @@
       <form class="form-signin" action="signupfunctions.php" onsubmit="return validateForm()" method="post">
       <label>Account Information</label>
 
-        <label for="inputUser" class="sr-only">Email address</label>
-        <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required autofocus>
-
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-       
+        <label for="inputName" class="sr-only">Name</label>
+        <input name = "name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>" type="cont" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        
         <label for="inputEmail" class="sr-only">Email</label>
         <input name = "email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>" type="cont" id="inputEmail" class="form-control" placeholder="Email" required>
 
-        <label for="inputName" class="sr-only">Name</label>
-        <input name = "name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $yourname;?>" type="cont" id="inputName" class="form-control" placeholder="Name" required>
-        
+        <label for="inputUser" class="sr-only">Email address</label>
+        <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+      <br><label>Payment Information</label>
         <label for="inputCardNo" class="sr-only">Card No.</label>
-        <input name = "cardno" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>" type="last" id="inputCardNo" class="form-control" placeholder="Credit Card No." required>
+        <input name = "cardno" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>" type="cont" id="inputCardNo" class="form-control" placeholder="Credit Card No." required>
         
+        <label for="inputExpDate" class="sr-only">Exp. Date</label>
+            <input name = "expdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $expdate;?>" type="date" id="inputExpDate" class="form-control" placeholder="Exp. Date" required>
+                
+            <div class="form-group">
+              <label for="sel1" class="sr-only">Type:</label>
+              <select name="type" class="form-control" id="sel1">
+                <option value='AMEX'>American Express</option>
+                <option value='DISC'>Discover</option>
+                <option value='MSTR'>MasterCard</option>
+                <option value='VISA'>Visa</option>
+              </select>
+            </div>
 
       <br><label>Address Information</label>
 
