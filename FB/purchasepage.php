@@ -35,7 +35,7 @@ if($result->num_rows != 1) {
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: <?php echo $row["item_name"]; ?></title>
+    <title>FoodBuzz: Buy Now</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -94,14 +94,15 @@ if($result->num_rows != 1) {
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-        <h1><?php echo $row["item_name"]; ?></h1>
-        <p><a class="btn btn-lg btn-success" href="purchasepage.php?id=$id" role="button">Buy $<?php echo $row["price"]; ?></a></p>
+        <h1>Buy Now</h1>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-          <h4>Description</h4>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <h1><?php echo $row["item_name"]; ?></h1>
+
+          <br><h4>Description</h4>
           <p><?php echo $row["description"]; ?></p>
 
           <br><h4>Price</h4>
@@ -110,7 +111,50 @@ if($result->num_rows != 1) {
           <br><h4>Seller</h4>
           <p><?php echo $row["user_seller"]; ?></p>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-lg-4">
+          <form class="form-signin" action="purchasefunctions.php" onsubmit="return validateForm()" method="post">
+            <label>Payment Information</label>
+
+            <label for="inputCardNo" class="sr-only">Credit Card No.</label>
+            <input name = "cardno" maxlength="16" aria-describedby="basic-addon1" value="<?php echo $cardno;?>" type="cont" id="inputCardNo" class="form-control" placeholder="Credit Card No." required autofocus>
+
+            <label for="inputExpDate" class="sr-only">Exp. Date</label>
+            <input name = "expdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $expdate;?>" type="last" id="inputExpDate" class="form-control" placeholder="Exp. Date" required>
+                
+            <div class="form-group">
+              <label for="sel1" class="sr-only">Type:</label>
+              <select name="type" class="form-control" id="sel1">
+                <option value='AMEX'>American Express</option>
+                <option value='DISC'>Discover</option>
+                <option value='MSTR'>MasterCard</option>
+                <option value='VISA'>Visa</option>
+              </select>
+            </div>
+
+            <label>Delivery Information</label>
+            <label for="inputName" class="sr-only">Name</label>
+            <input name = "name" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $name;?>" type="cont" id="inputName" class="form-control" placeholder="Name" required>
+
+            <label for="inputStreet" class="sr-only">Street</label>
+            <input name = "street" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $street;?>" type="cont" id="inputStreet" class="form-control" placeholder="Street Address" required>
+
+            <label for="inputCity" class="sr-only">City</label>
+            <input name = "city" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $city;?>" type="cont" id="inputCity" class="form-control" placeholder="City" required>
+            
+            <label for="inputState" class="sr-only">State</label>
+            <input name = "state" maxlength="2" aria-describedby="basic-addon1" value="<?php echo $state;?>" type="cont" id="inputState" class="form-control" placeholder="State" required>
+               
+            <label for="inputZip" class="sr-only">Zip Code</label>
+            <input name = "zip" maxlength="5" aria-describedby="basic-addon1" value="<?php echo $zip;?>" type="cont" id="inputZip" class="form-control" placeholder="Zip Code" required>
+
+            <label for="inputPhone" class="sr-only">Phone</label>
+            <input name = "phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>" type="last" id="inputPhone" class="form-control" placeholder="Phone No." required>
+                
+
+            <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='purchasefunctions.php'" class="btn btn-success">Buy $<?php echo $row["price"]; ?></button>
+          </form>
+        </div>
+        <div class="col-lg-2"></div>
       </div>
 
   </center>

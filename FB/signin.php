@@ -81,6 +81,17 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         
+        <div class="form-group">
+          <label for="sel1">Type:</label>
+          <select class="form-control" id="sel1">
+            <option>AMEX</option>
+            <option>DISC</option>
+            <option>MSTR</option>
+            <option>VISA</option>
+          </select>
+        </div>
+
+
         <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Sign In</button>
       </form>
 

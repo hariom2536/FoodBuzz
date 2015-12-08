@@ -118,10 +118,12 @@ CREATE TABLE Sale(
 	item_id			 CHAR(40),
 	del_id			 CHAR(40),
 	user_buyer		 CHAR(40),
+	card_no			 CHAR(16),
 	PRIMARY KEY (item_id, del_id, user_buyer),
 	FOREIGN KEY (item_id) REFERENCES Sale_Item (item_id),
 	FOREIGN KEY (del_id) REFERENCES Delivery (del_id),
-	FOREIGN KEY (user_buyer) REFERENCES Registered_User (username)
+	FOREIGN KEY (user_buyer) REFERENCES Registered_User (username),
+	FOREIGN KEY (card_no) REFERENCES Payment_Info (card_no)
 );
 
 CREATE TABLE Auction(
@@ -129,10 +131,12 @@ CREATE TABLE Auction(
 	item_id			 CHAR(40),
 	del_id			 CHAR(40),
 	user_buyer		 CHAR(40),
+	card_no			 CHAR(16),
 	PRIMARY KEY (item_id, del_id, user_buyer),
 	FOREIGN KEY (item_id) REFERENCES Auction_Item (item_id),
 	FOREIGN KEY (del_id) REFERENCES Delivery (del_id),
-	FOREIGN KEY (user_buyer) REFERENCES Registered_User (username)
+	FOREIGN KEY (user_buyer) REFERENCES Registered_User (username),
+	FOREIGN KEY (card_no) REFERENCES Payment_Info (card_no)
 );
 
 

@@ -190,9 +190,9 @@ INSERT INTO Delivery
      ('100100','Chex mix','Traditional Snack','0.99','4.99','zhucity','2015-11-30','2015-12-12','orderback');
 
 INSERT INTO Sale
-VALUES ('2015-12-01', '100010', '1', 'mikeygmikeyg');
+VALUES ('2015-12-01', '100010', '1', 'mikeygmikeyg','0000111122223331');
 
 INSERT INTO Auction
-VALUES ('2015-12-02', '100097', '2', 'LeBronJames23');
+VALUES ('2015-12-02', '100097', '2', 'LeBronJames23','0000111122223334');
     
 
