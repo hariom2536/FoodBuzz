@@ -127,7 +127,8 @@
                       <h2>$row[1] <br /> </h2>
                       <body>$row[2]<br /></body>
                       <br>
-                      <p><a href='#' class='btn btn-primary' role='button'>Purchase</a> <a href='#'' class='btn btn-default' role='button'>Info</a></p>
+                      <p><a href='purchase.php?id=$row[0]' class='btn btn-primary' role='button'>Buy $$row[3]</a> 
+                      <a href='productsalepage.php?id=$row[0]' class='btn btn-default' role='button'>Info</a></p>
                     </div>
                   </div>
                 </div>";

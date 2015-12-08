@@ -1,13 +1,28 @@
 <?php
- $db = mysql_connect("localhost","root",""); 
- if (!$db) {
- die("Database connection failed miserably: " . mysql_error());
- }
- //Step2
- $db_select = mysql_select_db("FoodBuzz",$db);
- if (!$db_select) {
- die("Database selection also failed miserably: " . mysql_error());
- }
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "FoodBuzz";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+//------------------------------------------
+
+$id=$_GET['id'];
+
+$sql = "SELECT * FROM Auction_Item WHERE item_id = $id";
+$result = $conn->query($sql);
+
+if($result->num_rows != 1) {
+  echo "Error: Product not found";
+} else {
+  $row = $result->fetch_assoc();
+}
 ?>
 
 <html lang="en">
@@ -20,7 +35,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Sale Items</title>
+    <title>FoodBuzz: <?php echo $row["item_name"]; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,16 +74,14 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="mainpage.php">Home</a></li>
-            <li class="active"><a href="saleitempage.php">Sale Items</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
             <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="sellitem.php">Sell an item</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="auctionitem.php">Auction an item</a></li>
+                <li><a href="#">Sell an item</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="settingspage.php">Settings</a></li>
               </ul>
@@ -79,61 +92,36 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <form name="reg" action="salesearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
-      <h2>Sale Items</h2>
-      <div class="container">
-        <div class="row">
-          <div class="search">
-            <div class='col-md-3'></div>
-            <div class='col-md-5'>
-            <input name = "search" maxlength="40" type="cont" class="form-control input-sm" maxlength="64" placeholder="Search..." required/>
-            </div>
-            <div class='col-md-1'>
-            <button type="submit" href="saleitempage.php" class="btn btn-primary btn-sm">Search</button>
-            </div>
-            <div class='col-md-3'></div>
-          </div>
-        </div>
+        <h1><?php echo $row["item_name"]; ?></h1>
+         <p>Ends <?php echo $row["date_end"]; ?></p>
+        <p><a class="btn btn-lg btn-success" href="purchase.php?id=$id" role="button">Purchase $<?php echo $row["highest_bid"]; ?> + $1</a></p>
       </div>
-    </div>
-    </form>
 
-    <div class="container">
-      <?php
-      $result = mysql_query("SELECT * FROM Sale_Item", $db);
-      if (!$result) {
-        die("Database query failed: " . mysql_error());
-      }
+      <div class="row marketing">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <h4>Description</h4>
+          <p><?php echo $row["description"]; ?></p>
 
-      $count = 0;
-      while ($row = mysql_fetch_array($result)) {
-        if($count%3 == 2) {
-          echo "<div class='row'>";
-        }
-          echo "<div class='col-md-4'>
-                  <div class='thumbnail'>
-                    <div class='caption'>
-                      <h2>$row[1]<br /> </h2>
-                      <body>$row[2]<br /></body>
-                      <br>
-                      <p><a href='purchase.php?id=$row[0]' class='btn btn-primary' role='button'>Buy $$row[3]</a> 
-                      <a type='submit' href='productsalepage.php?id=$row[0]' class='btn btn-default' role='button'>Info</a></p>
-                    </div>
-                    </form>
-                  </div>
-                </div>";
+          <br><h4>Highest Bid</h4>
+          <p>$<?php echo $row["highest_bid"]; ?></p>
+          <p>by <?php echo $row["highest_user"]; ?></p>
 
-        if($count%3 == 2) {
-          echo "</div>";
-        }
-        
-        $count = $count+1;
-     }
-    ?>
-  </div>
-	</center>
+          <br><h4>Start Date / End Date</h4>
+          <p><?php echo $row["date_start"]; ?> / <?php echo $row["date_end"]; ?></p>
+
+          <br><h4>Seller</h4>
+          <p><?php echo $row["user_seller"]; ?></p>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+
+  </center>
+      
+    </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -147,6 +135,5 @@
 </html>
 
 <?php
-//Step5
- mysql_close($db);
+$conn->close();
 ?>

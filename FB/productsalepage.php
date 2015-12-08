@@ -1,13 +1,28 @@
 <?php
- $db = mysql_connect("localhost","root",""); 
- if (!$db) {
- die("Database connection failed miserably: " . mysql_error());
- }
- //Step2
- $db_select = mysql_select_db("FoodBuzz",$db);
- if (!$db_select) {
- die("Database selection also failed miserably: " . mysql_error());
- }
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "FoodBuzz";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+//------------------------------------------
+
+$id=$_GET['id'];
+
+$sql = "SELECT * FROM Sale_Item WHERE item_id = $id";
+$result = $conn->query($sql);
+
+if($result->num_rows != 1) {
+  echo "Error: Product not found";
+} else {
+  $row = $result->fetch_assoc();
+}
 ?>
 
 <html lang="en">
@@ -20,7 +35,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Product</title>
+    <title>FoodBuzz: <?php echo $row["item_name"]; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -79,11 +94,24 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-      <?php
-        $info=$_POST['info'];
-        echo $info[0];
-      ?>
-    </div>
+        <h1><?php echo $row["item_name"]; ?></h1>
+        <p><a class="btn btn-lg btn-success" href="purchase.php?id=$id" role="button">Buy $<?php echo $row["price"]; ?></a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <h4>Description</h4>
+          <p><?php echo $row["description"]; ?></p>
+
+          <br><h4>Price</h4>
+          <p>$<?php echo $row["price"]; ?></p>
+
+          <br><h4>Seller</h4>
+          <p><?php echo $row["user_seller"]; ?></p>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
 
   </center>
       
@@ -102,6 +130,5 @@
 </html>
 
 <?php
-//Step5
- mysql_close($db);
+$conn->close();
 ?>

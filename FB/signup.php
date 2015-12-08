@@ -144,7 +144,7 @@
         <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required autofocus>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="cont" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
        
         <label for="inputEmail" class="sr-only">Email</label>
         <input name = "email" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $email;?>" type="cont" id="inputEmail" class="form-control" placeholder="Email" required>

@@ -79,7 +79,7 @@
         <input name = "username" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $username;?>" type="cont" id="inputUser" class="form-control" placeholder="Username" required autofocus>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="last" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         
         <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Sign In</button>
       </form>
