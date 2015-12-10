@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $uname=$_POST['username'];
 $password=$_POST['password'];
 
-$sql = "SELECT * FROM Registered_User WHERE username = '$uname'";
+$sql = "SELECT * FROM Registered_User WHERE username = '$uname';";
 $result = $conn->query($sql);
 
 if($result->num_rows != 1) {
