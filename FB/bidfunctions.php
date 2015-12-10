@@ -27,6 +27,7 @@ $password=$_POST['password'];
 $uname=$_SESSION['user']['username'];
 $product=$_SESSION['product'];
 $item_id=$product['item_id'];
+$price=$product['highest_bid']+2;
 
 $contact_id=GUID();
 $fail=0;
@@ -42,7 +43,7 @@ if($password != $_SESSION['user']['password']) {
 
 	if (!$result1 ) {
   		$fail = 1;
-  		die("Database query failed1: Invalid payment info");
+  		die("Database query failed1: Invalid payment info". mysql_error());
 	}
 
 	$result2 = mysql_query("INSERT INTO Contact_Info (contact_id,street,city,state,zip,phone)
@@ -50,7 +51,7 @@ if($password != $_SESSION['user']['password']) {
 
 	if (!$result2) {
   		$fail = 1;
-  		die("Database query failed2: Invalid contact info");
+  		die("Database query failed2: Invalid contact info". mysql_error());
 	}
 
 	$result3 = mysql_query("INSERT INTO Delivery (del_id,payment_receipt,item_receipt)
@@ -58,22 +59,31 @@ if($password != $_SESSION['user']['password']) {
 
 	if (!$result3) {
   		$fail = 1;
-  		die("Database query failed3: Sale-Delivery failed");
+  		die("Database query failed3: Auction-Delivery failed". mysql_error());
 	}
 
-	$result4 = mysql_query("INSERT INTO Sale (trans_date,item_id,del_id,user_buyer)
+	$result4 = mysql_query("INSERT INTO Auction (trans_date,item_id,del_id,user_buyer)
 			VALUES ('$date','$item_id','$del_id','$uname');", $db);
 
 	if (!$result4) {
   		$fail = 1;
-  		die("Database query failed3: Sale-Transaction failed");
+  		die("Database query failed3: Auction-Transaction failed". mysql_error());
+	}
+
+	$result5 = mysql_query("UPDATE Auction_Item
+							SET highest_bid=$price, highest_user='$uname'
+							WHERE item_id='$item_id';", $db);
+
+	if (!$result5) {
+  		$fail = 1;
+  		die("Database query failed5: Auction item update failed" . mysql_error());
 	}
 }
 
 if($failed == 1) {
   echo "Error: Transaction failed";
 } else {
-  header('Location: salecompletepage.php');
+  header('Location: auctioncompletepage.php');
 }
 
 $conn->close();

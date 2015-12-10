@@ -17,7 +17,7 @@ session_start();
 
 $id=$_GET['id'];
 
-$sql = "SELECT * FROM Sale_Item WHERE item_id = $id";
+$sql = "SELECT * FROM Auction_Item WHERE item_id = $id";
 $result = $conn->query($sql);
 
 if($result->num_rows != 1) {
@@ -37,7 +37,7 @@ if($result->num_rows != 1) {
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Buy Now</title>
+    <title>FoodBuzz: Bid Auction</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -96,7 +96,7 @@ if($result->num_rows != 1) {
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-        <h1>Buy Now</h1>
+        <h1>Bid on Auction</h1>
       </div>
 
       <div class="row marketing">
@@ -109,13 +109,13 @@ if($result->num_rows != 1) {
           <p><?php echo $row["description"]; ?></p>
 
           <br><h4>Price</h4>
-          <p>$<?php echo $row["price"]; ?></p>
+          <p>$<?php echo $row["highest_bid"]+2; ?></p>
 
           <br><h4>Seller</h4>
           <p><?php echo $row["user_seller"]; ?></p>
         </div>
         <div class="col-lg-4">
-        <form class="form-signin" action="purchasefunctions.php" onsubmit="return validateForm()" method="post">
+        <form class="form-signin" action="bidfunctions.php" onsubmit="return validateForm()" method="post">
             <label>Payment Information</label>
 
             <label for="inputCardNo" class="sr-only">Credit Card No.</label>
@@ -158,7 +158,7 @@ if($result->num_rows != 1) {
             <?php
             	$_SESSION['product']=$row;
             	?>
-            <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='purchasefunctions.php' class="btn btn-success">Buy $<?php echo $row["price"]; ?></button>
+            <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='bidfunctions.php' class="btn btn-success">Bid $<?php echo $row["highest_bid"]; ?></button>
              </form>
         </div>
         <div class="col-lg-2"></div>

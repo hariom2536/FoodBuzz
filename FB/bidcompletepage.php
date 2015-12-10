@@ -20,7 +20,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Auction Items</title>
+    <title>FoodBuzz: Bid Complete</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,20 +58,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="mainpage.php">Home</a></li>
+            <li class="active"><a href="mainpage.php">Home</a></li>
             <li><a href="saleitempage.php">Sale Items</a></li>
-            <li class="active"><a href="auctionitempage.php">Auction Items</a></li>
+            <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="sellitem.php">Sell an item</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="auctionitem.php">Auction an item</a></li>
+                <li><a href="#">Sell an item</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="settingspage.php">Settings</a></li>
-
               </ul>
             <li><a href="index.php">Sign Out</a></li>
           </ul>
@@ -80,66 +77,13 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-     <form name="reg" action="auctionsearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
-      <h2>Auction Items</h2>
-      <div class="container">
-        <div class="row">
-          <div class="search">
-            <div class='col-md-3'></div>
-            <div class='col-md-5'>
-            <input name = "search" type="text" class="form-control input-sm" maxlength="64" placeholder="Search..." />
-            </div>
-            <div class='col-md-1'>
-            <button type="submit" href="auctionitempage.php" class="btn btn-primary btn-sm">Search</button>
-            </div>
-            <div class='col-md-3'></div>
-          </div>
-        </div>
-      </div>
+      <h2>Bid Completed! Thank you for getting your FoodBuzz with us!</h2>
     </div>
-  </form>
-    
-    <div class="container">
-      <?php
-      $result = mysql_query("SELECT * FROM Auction_Item", $db);
-      if (!$result) {
-        die("Database query failed: " . mysql_error());
-      }
 
-      $count = 0;
-      while ($row = mysql_fetch_array($result)) {
-        if($count%3 == 2) {
-          echo "<div class='row'>";
-        }
-          echo "<div class='col-md-4'>
-                  <div class='thumbnail'>
-                    <div class='caption'>
-                      <h2>$row[1] <br /> </h2>
-                      <body>$row[2]<br /></body>
-                      <br>
-                      <p><a href='bidpage.php?id=$row[0]' class='btn btn-primary' role='button'>Bid $$row[4] + $2</a> 
-                      <a href='productauctionpage.php?id=$row[0]' class='btn btn-default' role='button'>Info</a></p>
-                    </div>
-                  </div>
-                </div>";
-
-        if($count%3 == 2) {
-          echo "</div>";
-        }
-        
-
-        $count = $count+1;
-
-     }
-    ?>
-  </div>
-
-
-
-
-	</center>
+  </center>
+      
     </div> <!-- /container -->
 
 

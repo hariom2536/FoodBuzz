@@ -128,7 +128,7 @@
                       <h2>$row[1] <br /> </h2>
                       <body>$row[2]<br /></body>
                       <br>
-                      <p><a href='bid.php?id=$row[0]' class='btn btn-primary' role='button'>Bid $$row[4] + $1</a> 
+                      <p><a href='bidpage.php?id=$row[0]' class='btn btn-primary' role='button'>Bid $$row[4] + $2</a> 
                       <a href='productauctionpage.php?id=$row[0]' class='btn btn-default' role='button'>Info</a></p>
                     </div>
                   </div>

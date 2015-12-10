@@ -95,7 +95,7 @@ if($result->num_rows != 1) {
     <center>
     <div class="jumbotron">
         <h1><?php echo $row["item_name"]; ?></h1>
-        <p><a class="btn btn-lg btn-success" href="purchasepage.php?id=$id" role="button">Buy $<?php echo $row["price"]; ?></a></p>
+        <p><a class="btn btn-lg btn-success" href="purchasepage.php?id=<?php echo $id; ?>" role="button">Buy $<?php echo $row["price"]; ?></a></p>
       </div>
 
       <div class="row marketing">
