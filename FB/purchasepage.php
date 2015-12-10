@@ -17,7 +17,7 @@ session_start();
 
 $id=$_GET['id'];
 
-$sql = "SELECT * FROM Sale_Item WHERE item_id = $id";
+$sql = "SELECT * FROM Sale_Item WHERE item_id = '$id'";
 $result = $conn->query($sql);
 
 if($result->num_rows != 1) {
