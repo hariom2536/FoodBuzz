@@ -122,8 +122,8 @@ if($result->num_rows != 1) {
             <input name = "expdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $expdate;?>" type="date" id="inputExpDate" class="form-control" placeholder="Exp. Date" required>
                 
             <div class="form-group">
-              <label for="sel1" class="sr-only">Type:</label>
-              <select name="type" class="form-control" id="sel1">
+              <label for="inputType" class="sr-only">Type:</label>
+              <select name="type" class="form-control" id="inputType">
                 <option value='AMEX'>American Express</option>
                 <option value='DISC'>Discover</option>
                 <option value='MSTR'>MasterCard</option>
@@ -149,7 +149,9 @@ if($result->num_rows != 1) {
 
             <label for="inputPhone" class="sr-only">Phone</label>
             <input name = "phone" maxlength="10" aria-describedby="basic-addon1" value="<?php echo $phone;?>" type="last" id="inputPhone" class="form-control" placeholder="Phone No." required>
-                
+            
+			<label for="inputPassword" class="sr-only">Password</label>
+            <input name = "password" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $password;?>" type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required>    
 
             <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='purchasefunctions.php'" class="btn btn-success">Buy $<?php echo $row["price"]; ?></button>
           </form>
