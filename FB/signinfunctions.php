@@ -27,6 +27,10 @@ if($result->num_rows != 1) {
     echo "Error: Incorrect password";
   } else {
     header('Location: mainpage.php');
+    
+	session_start(); #start session
+	$_SESSION['user'] = $row;
+
   }
 }
 

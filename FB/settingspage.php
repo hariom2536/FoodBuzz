@@ -72,6 +72,9 @@
               </ul>
             <li><a href="index.php">Sign Out</a></li>
           </ul>
+
+
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -80,7 +83,7 @@
     <center>
     <div class="jumbotron">
       <h2>Settings</h2>
-      
+      <h3><?php echo $_SESSION['user']; ?></h3>
     </div>
     
 
