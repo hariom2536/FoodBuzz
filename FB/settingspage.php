@@ -1,4 +1,7 @@
 <?php
+  session_start();
+?>
+<?php
  $db = mysql_connect("localhost","root",""); 
  if (!$db) {
  die("Database connection failed miserably: " . mysql_error());
@@ -9,6 +12,8 @@
  die("Database selection also failed miserably: " . mysql_error());
  }
 ?>
+
+
 
 <html lang="en">
   <head>
@@ -83,14 +88,30 @@
     <center>
     <div class="jumbotron">
       <h2>Settings</h2>
-      <h3><?php echo $_SESSION['user']; ?></h3>
+      
     </div>
+
+
+    
+      <h3><span class="label label-default">Username</span> <?php echo $_SESSION['user']['username']; ?> </h3>
+    <h3><span class="label label-default">Name</span> <?php echo $_SESSION['user']['name']; ?> </h3>
+    <h3><span class="label label-default">Email</span> <?php echo $_SESSION['user']['email']; ?> </h3>
+    </center>
+
+
+
+
+
+
+    
+
+
     
 
 
 
 
-	</center>
+	
     </div> <!-- /container -->
 
 
