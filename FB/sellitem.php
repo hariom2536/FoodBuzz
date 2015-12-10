@@ -94,7 +94,7 @@
 
         <input name = "price" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $price;?>" type="last" id="price" class="form-control" placeholder="Price" required>
         
-        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Sign In</button>
+        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" onClick="self.location='signinfunctions.php?name=signinUser'" class="btn btn-success">Add Item</button>
       </form>
 
     </div> <!-- /container -->
