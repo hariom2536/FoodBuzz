@@ -46,7 +46,7 @@ INSERT INTO Registered_User
     ('iggyazalea','music70','iggy@bing.com','Iggy Azalea','1990-06-07',15000000,'F','11','0000111122223311'),
     ('fettywap1738','ayyyyyy','fetty@gmail.com','Fetty H. Wap','1991-06-07',3000000,'M','12','0000111122223312'),
     ('rubenslikk','fishmix','astroslikk@metrozu.com','Ruben','1989-06-07',3300000,'M','13','0000111122223313'),
-    ('orderback','noun','indvidual@faciliate.com','Ordering O. Food','1991-01-01',3000000,'M','14','0000111122223314'),
+    ('orderback','noun','individual@faciliate.com','Ordering O. Food','1991-01-01',3000000,'M','14','0000111122223314'),
     ('Karl22','red12','karlmarx@marx.com','Karl Marx','1818-05-05',200000,'M','15','0000111122223315');
 
 INSERT INTO Buyer
