@@ -85,6 +85,28 @@
       <h2>Welcome to FoodBuzz, friend. Let's get a FoodBuzz goin'. </h2>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class='col-md-2'>
+          <button class="btn btn-lg btn-primary btn-block" name = "saleitempage" type="submit" onclick="location.href='saleitempage.php'" class="btn btn-success">Sale Items</button>
+          <button class="btn btn-lg btn-primary btn-block" name = "auctionitempage" type="submit" onclick="location.href='auctionitempage.php'" class="btn btn-success">Auction Items</button>
+          <hr>
+          <button class="btn btn-lg btn-primary btn-block" name = "sellitem" type="submit" onclick="location.href='sellitem.php'" class="btn btn-success">Sell an Item</button>
+          <button class="btn btn-lg btn-primary btn-block" name = "auctionitem" type="submit" onclick="location.href='auctionitem.php'" class="btn btn-success">Auction an Item</button>
+          <hr>
+          <button class="btn btn-lg btn-primary btn-block" name = "orderhistorysale" type="submit" onclick="location.href='orderhistorysale.php'" class="btn btn-success">Sale History</button>
+          <button class="btn btn-lg btn-primary btn-block" name = "orderhistoryauction" type="submit" onclick="location.href='orderhistoryauction.php'" class="btn btn-success">Auction History</button>
+          <button class="btn btn-lg btn-primary btn-block" name = "settings" type="submit" onclick="location.href='settingspage.php'" class="btn btn-success">Settings</button>
+        </div>
+        <div class='col-md-5'>
+          <img src="img/main1.jpg" alt="logo" style="width:350px;height:450px;"/>
+        </div>
+        <div class='col-md-5'>
+          <img src="img/main2.jpg" alt="logo" style="width:350px;height:450px;"/>
+        </div>
+      </div>
+    </div>
+
   </center>
       
     </div> <!-- /container -->

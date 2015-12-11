@@ -81,18 +81,15 @@
       <div class="row">
         <div class="col-md-4">
           <h2>About</h2>
-          <p> FoodBuzz was created with you in mind. Got the knack for cooking? Get a foodbuzz going. Hungry and want to taste some local delacacies? Get a FoodBuzz going.  </p>
-          <p><a class="btn btn-default" onclick="location.href = 'testpage.php';" href="#" role="button">View details &raquo;</a></p>
+          <p> FoodBuzz was created with you in mind. Got the knack for cooking? Get a foodbuzz going. Hungry and want to taste some local delacacies? Get a FoodBuzz going.</p>
         </div>
         <div class="col-md-4">
           <h2>FAQ</h2>
-          <p>Wait are you even serious rn? You named your website foodbuzz? And your motto is "We hope you get a foodbuzz going"? This is not a good company. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>Wait are you even serious rn? You named your website foodbuzz? And your motto is "We hope you get a foodbuzz going"? This is not a good company.</p>
        </div>
         <div class="col-md-4">
           <h2>Facilitation</h2>
           <p>It's easier than ever to get a foodbuzz going with the improved auction feature. Give it a try soon everyone will be talking about the good eats!</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
 
