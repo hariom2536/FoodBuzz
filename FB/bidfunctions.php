@@ -83,7 +83,7 @@ if($password != $_SESSION['user']['password']) {
 if($failed == 1) {
   echo "Error: Transaction failed";
 } else {
-  header('Location: auctioncompletepage.php');
+  header("Location: auctioncompletepage.php?conf=$del_id");
 }
 
 $conn->close();

@@ -8,6 +8,9 @@
  if (!$db_select) {
  die("Database selection also failed miserably: " . mysql_error());
  }
+
+ session_start();
+ $conf = $_GET['conf'];
 ?>
 
 <html lang="en">
@@ -20,7 +23,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>FoodBuzz: Sale Items</title>
+    <title>FoodBuzz: Bid Complete</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,19 +61,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="mainpage.php">Home</a></li>
-            <li class="active"><a href="saleitempage.php">Sale Items</a></li>
+            <li class="active"><a href="mainpage.php">Home</a></li>
+            <li><a href="saleitempage.php">Sale Items</a></li>
             <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="sellitem.php">Sell an item</a></li>
-                <li><a href="auctionitem.php">Auction an item</a></li>
+                <li><a href="#">Sell an item</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="orderhistorysale.php">Order History - Sale</a></li>
-                <li><a href="orderhistoryauction.php">Order History - Auction</a></li>
                 <li><a href="settingspage.php">Settings</a></li>
               </ul>
             <li><a href="index.php">Sign Out</a></li>
@@ -80,61 +80,59 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <form name="reg" action="salesearchfunction.php" onsubmit="return validateForm()" method="post">
     <center>
     <div class="jumbotron">
-      <h2>Sale Items</h2>
-      <div class="container">
-        <div class="row">
-          <div class="search">
-            <div class='col-md-3'></div>
-            <div class='col-md-5'>
-            <input name = "search" maxlength="40" type="cont" class="form-control input-sm" maxlength="64" placeholder="Search..." required/>
-            </div>
-            <div class='col-md-1'>
-            <button type="submit" href="saleitempage.php" class="btn btn-primary btn-sm">Search</button>
-            </div>
-            <div class='col-md-3'></div>
-          </div>
-        </div>
-      </div>
+      <h2>Bid Completed! Thank you for getting your FoodBuzz with us!</h2>
     </div>
-    </form>
 
     <div class="container">
-      <?php
-      $result = mysql_query("SELECT * FROM Sale_Item", $db);
-      if (!$result) {
+    <?php
+      $result1 = mysql_query("SELECT * FROM Auction WHERE del_id='$conf'", $db);
+      if (!$result1) {
         die("Database query failed: " . mysql_error());
       }
+      $rowSale = mysql_fetch_array($result1);
+      $itemid=$rowSale['item_id'];
+      $result2 = mysql_query("SELECT * FROM Auction_Item WHERE item_id='$itemid'", $db);
+      if (!$result2) {
+        die("Database query failed: " . mysql_error());
+      }
+      $rowItem = mysql_fetch_array($result2);
 
-      $count = 0;
-      while ($row = mysql_fetch_array($result)) {
-        if($count%3 == 2) {
-          echo "<div class='row'>";
-        }
-          echo "<div class='col-md-4'>
-                  <div class='thumbnail'>
-                    <div class='caption'>
-                      <h2>$row[1]<br /> </h2>
-                      <body>$row[2]<br /></body>
-                      <br>
-                      <p><a href='purchasepage.php?id=$row[0]' class='btn btn-primary' role='button'>Buy $$row[3]</a> 
-                      <a type='submit' href='productsalepage.php?id=$row[0]' class='btn btn-default' role='button'>Info</a></p>
+      echo "<div class='row'> 
+                  <div class='col-md-4'>
+                    <div class='thumbnail'>
+                      <div class='caption'>
+                        <body>
+                          <p>Date: $rowSale[0]</p>
+                          <p>Item ID: $rowSale[1]</p>
+                          <p>Confirmation #<br>$rowSale[2]</p>
+                        </body>
+                        <br>
+                      </div>
                     </div>
-                    </form>
+                  </div>
+                  <div class='col-md-8'>
+                    <div class='thumbnail'>
+                      <div class='caption'>
+                        <h2>$rowItem[1]<br /> </h2>
+                        <body>
+                          <p>$rowItem[2]</p>
+                          <p>Bid Price: $$rowItem[4]</p>
+                          <p>Start Date / End Date<br>$rowItem[6] / $rowItem[7]</p>
+                          <p>Sold By: $rowItem[8]</p>
+                        </body>
+                        <br>
+                      </div>
+                    </div>
                   </div>
                 </div>";
-
-        if($count%3 == 2) {
-          echo "</div>";
-        }
-        
-        $count = $count+1;
-     }
     ?>
-  </div>
-	</center>
+
+  </center>
+      
+    </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

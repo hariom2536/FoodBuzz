@@ -46,6 +46,14 @@ if (!$result3 ) {
   die("Database query failed3: " . mysql_error());
 }
 
+$result4 = mysql_query("INSERT INTO Buyer (username)
+                        VALUES ('$uname');", $db);
+if (!$result4 ) {
+  $fail = 1;
+  die("Database query failed4: " . mysql_error());
+}
+
+
 mysql_close($db);
 
 if(!$fail) {

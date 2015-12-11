@@ -8,6 +8,9 @@
  if (!$db_select) {
  die("Database selection also failed miserably: " . mysql_error());
  }
+
+ session_start();
+ $conf = $_GET['conf'];
 ?>
 
 <html lang="en">
@@ -82,9 +85,51 @@
       <h2>Transaction Completed! Thank you for getting your FoodBuzz with us!</h2>
     </div>
 
+    <div class="container">
+    <?php
+      $result1 = mysql_query("SELECT * FROM Sale WHERE del_id='$conf'", $db);
+      if (!$result1) {
+        die("Database query failed: " . mysql_error());
+      }
+      $rowSale = mysql_fetch_array($result1);
+      $itemid=$rowSale['item_id'];
+      $result2 = mysql_query("SELECT * FROM Sale_Item WHERE item_id='$itemid'", $db);
+      if (!$result2) {
+        die("Database query failed: " . mysql_error());
+      }
+      $rowItem = mysql_fetch_array($result2);
+
+      echo "<div class='row'> 
+                  <div class='col-md-4'>
+                    <div class='thumbnail'>
+                      <div class='caption'>
+                        <body>
+                          <p>Date: $rowSale[0]</p>
+                          <p>Item ID: $rowSale[1]</p>
+                          <p>Confirmation #<br>$rowSale[2]</p>
+                        </body>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-md-8'>
+                    <div class='thumbnail'>
+                      <div class='caption'>
+                        <h2>$rowItem[1]<br /> </h2>
+                        <body>
+                          <p>$rowItem[2]</p>
+                          <p>Sale Price: $$rowItem[3]</p>
+                          <p>Sold By: $rowItem[4]</p>
+                        </body>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>";
+    ?>
+
+    </div>
   </center>
-      
-    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
