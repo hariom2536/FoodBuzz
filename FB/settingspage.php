@@ -68,18 +68,18 @@
             <li><a href="auctionitempage.php">Auction Items</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
+            <li class="active" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Sell an item</a></li>
+                <li><a href="sellitem.php">Sell an item</a></li>
+                <li><a href="auctionitem.php">Auction an item</a></li>
                 <li role="separator" class="divider"></li>
+                <li><a href="orderhistorysale.php">Order History - Sale</a></li>
+                <li><a href="orderhistoryauction.php">Order History - Auction</a></li>
                 <li><a href="settingspage.php">Settings</a></li>
               </ul>
             <li><a href="index.php">Sign Out</a></li>
           </ul>
-
-
-
         </div><!--/.nav-collapse -->
       </div>
     </nav>

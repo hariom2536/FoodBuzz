@@ -67,12 +67,14 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="sellitem.php">Sell an item</a></li>
-                <li role="separator" class="divider"></li>
                 <li><a href="auctionitem.php">Auction an item</a></li>
                 <li role="separator" class="divider"></li>
+                <li><a href="orderhistorysale.php">Order History - Sale</a></li>
+                <li><a href="orderhistoryauction.php">Order History - Auction</a></li>
                 <li><a href="settingspage.php">Settings</a></li>
+              </ul>
+            <li><a href="index.php">Sign Out</a></li>
           </ul>
-          <li><a href="index.php">Sign Out</a></li>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
