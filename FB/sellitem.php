@@ -81,7 +81,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <center>
     <div class="jumbotron">
-      <h3>Sell an Item</h3>
+      <h2>Sell an Item</h2>
     </div>
     
     <div class="container">
