@@ -86,7 +86,7 @@
     
     <div class="container">
 
-      <form class="form-signin" action="auctionitemfunctions.php" onsubmit="return validateForm()" method="post">
+      <form class="form-signin" action="sellitemfunctions.php" onsubmit="return validateForm()" method="post">
         <label >Item </label>
         <input name = "itemname" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $itemname;?>" type="text" id="itemname" class="form-control" placeholder="Item Name" required autofocus>
 
@@ -94,7 +94,7 @@
 
         <input name = "price" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $price;?>" type="last" id="price" class="form-control" placeholder="Price" required>
         
-        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='saleitemfunctions.php'  class="btn btn-success">Add Item</button>
+        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='sellitemfunctions.php'  class="btn btn-success">Add Item</button>
       </form>
 
     </div> <!-- /container -->
