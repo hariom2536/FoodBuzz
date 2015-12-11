@@ -18,7 +18,13 @@ $username = $_SESSION['user']['username'];
 
 $itemname=$_POST['itemname'];
 $description=$_POST['description'];
-$price=$_POST['price'];
+$startprice=$_POST['startprice'];
+$reserveprice=$_POST['reserveprice'];
+$startdate=$_POST['startdate'];
+$enddate=$_POST['enddate'];
+$highest_user = $username;
+$user_seller = $username;
+
 $itemid = GUID();
 
 
@@ -27,12 +33,6 @@ if (!$result3 ) {
   $fail = 1;
   die("Database query failed3: " . mysql_error());
 }
-
-
-
-#echo 'here';
-#echo mysql_num_rows($result3);
-#echo $username;
 
 
 if ( mysql_num_rows($result3) == 0)
@@ -48,8 +48,8 @@ if ( mysql_num_rows($result3) == 0)
 	}
 }
 
-$result1 = mysql_query("INSERT INTO Sale_Item (item_id,item_name,description,price,user_seller)
-                        VALUES ('$itemid','$itemname','$description',$price,'$username');", $db);
+$result1 = mysql_query("INSERT INTO Auction_Item (item_id,item_name,description,reserve_price,highest_bid,highest_user,date_start,date_end,user_seller)
+                        VALUES ('$itemid','$itemname','$description',$reserveprice,'$startprice','$username','$startdate','$enddate','$username');", $db);
 if (!$result1 ) {
   $fail = 1;
   die("Database query failed1: " . mysql_error());
