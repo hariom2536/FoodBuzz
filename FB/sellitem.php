@@ -86,7 +86,7 @@
     
     <div class="container">
 
-      <form class="form-signin" action="sellitemfunctions.php" onsubmit="return validateForm()" method="post">
+      <form class="form-signin" action="auctionitemfunctions.php" onsubmit="return validateForm()" method="post">
         <label >Item </label>
         <input name = "itemname" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $itemname;?>" type="text" id="itemname" class="form-control" placeholder="Item Name" required autofocus>
 

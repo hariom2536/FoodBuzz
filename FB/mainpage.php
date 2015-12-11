@@ -68,6 +68,8 @@
               <ul class="dropdown-menu">
                 <li><a href="sellitem.php">Sell an item</a></li>
                 <li role="separator" class="divider"></li>
+                <li><a href="auctionitem.php">Auction an item</a></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="settingspage.php">Settings</a></li>
               </ul>
             <li><a href="index.php">Sign Out</a></li>
