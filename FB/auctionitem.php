@@ -92,9 +92,24 @@
 
         <input name = "description" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $description;?>" type="text" id="description" class="form-control" placeholder="Description" required>
 
-        <input name = "price" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $price;?>" type="last" id="price" class="form-control" placeholder="Price" required>
+          <input name = "startprice" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $startprice;?>" type="text" id="price" class="form-control" placeholder="Start Price" required>
+
+
+        <input name = "reserveprice" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $reserveprice;?>" type="text" id="price" class="form-control" placeholder="Reserve Price" required>
+
+         <input name = "startdate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $startdate;?>" type="text" id="price" class="form-control" placeholder="Start Date" required>
+
+          <input name = "enddate" maxlength="40" aria-describedby="basic-addon1" value="<?php echo $enddate;?>" type="last" id="price" class="form-control" placeholder="End Date" required>
         
-        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='saleitemfunctions.php'  class="btn btn-success">Add Item</button>
+        <button class="btn btn-lg btn-primary btn-block" name = "submit" type="submit" href='
+    
+
+
+
+
+
+        saleitemfunctions.php'  class="btn btn-success">Add Item</button>
+
       </form>
 
     </div> <!-- /container -->
